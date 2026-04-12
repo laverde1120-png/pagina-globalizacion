@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Globalización y Desafíos Globales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0a3d62;
+      --secondary:#3c6382;
+      --accent:#38ada9;
+      --bg:#f4f7fb;
+      --card:#ffffff;
+    }
+
+    *{box-sizing:border-box;scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:#333;
+    }
+
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:white;
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    header h1{
+      margin:0;
+      font-size:2.5rem;
+    }
+
+    header p{
+      opacity:0.9;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      background:white;
+      padding:10px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      z-index:1000;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--primary);
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:var(--accent);
+    }
+
+    .container{
+      max-width:1000px;
+      margin:auto;
+      padding:20px;
+    }
+
+    section{
+      background:var(--card);
+      margin:30px 0;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      transform:translateY(20px);
+      opacity:0;
+      transition:all 0.6s ease;
+    }
+
+    section.visible{
+      transform:translateY(0);
+      opacity:1;
+    }
+
+    h2{
+      color:var(--primary);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:15px;
+    }
+
+    .card{
+      background:#f9fbfd;
+      padding:15px;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    iframe{
+      border-radius:10px;
+      margin-top:10px;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:var(--primary);
+      color:white;
+      margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌍 Globalización y Desafíos Globales</h1>
+  <p>Proyecto informativo - Agenda 2030</p>
+</header>
+
+<nav>
+  <a href="#globalizacion">Globalización</a>
+  <a href="#desigualdad">Desigualdad</a>
+  <a href="#ods">ODS</a>
+  <a href="#noticias">Asuntos Globales</a>
+</nav>
+
+<div class="container">
+
+<section id="globalizacion">
+  <h2>¿Qué es la Globalización?</h2>
+  <p>La globalización es un proceso de integración mundial que conecta economías, culturas y sociedades mediante el comercio, la tecnología y la comunicación.</p>
+  <div class="grid">
+    <div class="card">🌐 Interconexión global</div>
+    <div class="card">💻 Avance tecnológico</div>
+    <div class="card">📦 Comercio internacional</div>
+  </div>
+</section>
+
+<section id="desigualdad">
+  <h2>Desigualdad en el Mundo</h2>
+  <p>La desigualdad se refiere a las diferencias en ingresos, oportunidades y calidad de vida entre personas y países.</p>
+  <div class="grid">
+    <div class="card">💰 Brecha económica</div>
+    <div class="card">🎓 Acceso a educación</div>
+    <div class="card">🏥 Acceso a salud</div>
+  </div>
+</section>
+
+<section id="ods">
+  <h2>ODS y Agenda 2030</h2>
+  <p>Los ODS son 17 objetivos globales para erradicar la pobreza, proteger el planeta y garantizar bienestar para todos.</p>
+  <div class="grid">
+    <div class="card">🌱 Acción climática</div>
+    <div class="card">📚 Educación de calidad</div>
+    <div class="card">⚖️ Igualdad</div>
+  </div>
+</section>
+
+<section id="noticias">
+  <h2>Asuntos Globales</h2>
+  <p>Explora contenido actual como noticias, videos, libros o podcasts sobre temas globales.</p>
+  <iframe width="100%" height="300" src="https://www.youtube.com/embed/5MgBikgcWnY" allowfullscreen></iframe>
+</section>
+
+</div>
+
+<footer>
+  <p>Proyecto escolar - 2026 | Hecho por estudiante</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if(top < window.innerHeight - 100){
+        sec.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
