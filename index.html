@@ -6,29 +6,27 @@
 <title>Globalization Project</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#f4f7fb;color:#222;text-align:center}
-nav{background:#fff;padding:15px;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
-nav button{margin:5px;padding:10px;border:none;background:#0ea5e9;color:white;border-radius:8px;cursor:pointer}
+body{margin:0;font-family:Arial;background:#fff7ed;color:#333;text-align:center}
+nav{background:#fb923c;padding:15px}
+nav button{margin:5px;padding:10px;border:none;background:#ea580c;color:white;border-radius:8px;cursor:pointer}
 .section{display:none;padding:40px}
 .active{display:block}
 .card{background:white;padding:15px;margin:10px auto;border-radius:10px;max-width:500px;box-shadow:0 4px 10px rgba(0,0,0,0.1);cursor:pointer}
 .news{text-align:left;max-width:700px;margin:auto}
-.news-item{background:white;margin:10px 0;padding:15px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
-
-/* CHATBOT */
+.news-item{background:white;margin:15px 0;padding:15px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
+.news-item img{width:100%;border-radius:8px;margin-top:10px}
 .chatbox{max-width:500px;margin:30px auto;background:white;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);padding:15px;text-align:left}
 .chat-messages{height:150px;overflow-y:auto;border-bottom:1px solid #ddd;margin-bottom:10px;padding:5px}
 .chat-input{display:flex;gap:5px}
 .chat-input input{flex:1;padding:8px;border-radius:6px;border:1px solid #ccc}
-.chat-input button{padding:8px 12px;border:none;background:#0ea5e9;color:white;border-radius:6px}
-.bot{color:#0ea5e9;margin:5px 0}
-.user{color:#333;margin:5px 0}
+.chat-input button{padding:8px 12px;border:none;background:#ea580c;color:white;border-radius:6px}
 </style>
 </head>
 
 <body>
 
 <h1>🌍 Globalization Project</h1>
+<button onclick="speakIntro()">🔊 Play AI Voice</button>
 
 <nav>
   <button onclick="showSection('global')">Globalization</button>
@@ -38,65 +36,58 @@ nav button{margin:5px;padding:10px;border:none;background:#0ea5e9;color:white;bo
   <button onclick="showSection('chat')">ChatBot</button>
 </nav>
 
-<!-- GLOBALIZATION -->
 <div id="global" class="section active">
   <h2 onclick="toggleText('g1')">Globalization</h2>
   <p id="g1" style="display:none;">It connects countries through trade and technology.</p>
-
-  <div class="card" onclick="toggleText('g2')">Technology</div>
-  <p id="g2" style="display:none;">Technology allows faster global communication.</p>
-
-  <div class="card" onclick="toggleText('g3')">Trade</div>
-  <p id="g3" style="display:none;">Countries exchange goods and services.</p>
-
-  <h3>My Voice</h3>
-  <audio controls>
-    <source src="voz.mp3" type="audio/mpeg">
-  </audio>
 </div>
 
-<!-- INEQUALITY -->
 <div id="inequality" class="section">
   <h2 onclick="toggleText('i1')">Inequality</h2>
   <p id="i1" style="display:none;">Not everyone has the same opportunities.</p>
-
-  <div class="card" onclick="toggleText('i2')">Income Gap</div>
-  <p id="i2" style="display:none;">Some people earn much more than others.</p>
-
-  <div class="card" onclick="toggleText('i3')">Education</div>
-  <p id="i3" style="display:none;">Not all people have access to education.</p>
 </div>
 
-<!-- ODS -->
 <div id="ods" class="section">
   <h2 onclick="toggleText('o1')">ODS</h2>
   <p id="o1" style="display:none;">Global goals to improve life.</p>
-
-  <div class="card" onclick="toggleText('o2')">Climate Action</div>
-  <p id="o2" style="display:none;">Protect the environment.</p>
-
-  <div class="card" onclick="toggleText('o3')">Equality</div>
-  <p id="o3" style="display:none;">Everyone should have equal rights.</p>
 </div>
 
-<!-- NEWS -->
 <div id="news" class="section">
   <h2>Recent Global News (March–April 2026)</h2>
+
   <div class="news">
-    <div class="news-item">🌍 Countries increase cooperation on climate agreements.</div>
-    <div class="news-item">📉 Rising inequality in developing nations discussed globally.</div>
-    <div class="news-item">💻 Growth of AI impacting global jobs and economy.</div>
-    <div class="news-item">🌱 New sustainability projects launched worldwide.</div>
-    <div class="news-item">📦 International trade continues to expand after economic recovery.</div>
+
+    <div class="news-item">
+      🌍 UN Climate Summit pushes stronger global agreements
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+    </div>
+
+    <div class="news-item">
+      📉 World Bank warns about rising inequality in Latin America
+      <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e">
+    </div>
+
+    <div class="news-item">
+      💻 AI expansion continues impacting global employment
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+    </div>
+
+    <div class="news-item">
+      🌱 New renewable energy projects launched in Europe
+      <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+    </div>
+
+    <div class="news-item">
+      📦 International trade growth continues post-pandemic recovery
+      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+    </div>
+
   </div>
 </div>
 
-<!-- CHATBOT -->
 <div id="chat" class="section">
   <h2>Mini ChatBot</h2>
   <div class="chatbox">
     <div id="messages" class="chat-messages"></div>
-
     <div class="chat-input">
       <input type="text" id="userInput" placeholder="Ask in English or Spanish...">
       <button onclick="sendMessage()">Send</button>
@@ -115,6 +106,15 @@ function toggleText(id){
   el.style.display = el.style.display === 'none' ? 'block' : 'none';
 }
 
+function speakIntro(){
+  const msg = "Hello! Welcome to my globalization project. Here you will learn about global challenges, inequality, and recent world news.";
+  const speech = new SpeechSynthesisUtterance(msg);
+  speech.lang = "en-US";
+  speech.rate = 1;
+  speech.pitch = 1;
+  window.speechSynthesis.speak(speech);
+}
+
 function sendMessage(){
   const input = document.getElementById('userInput');
   const msg = input.value.toLowerCase();
@@ -122,19 +122,18 @@ function sendMessage(){
 
   if(!msg) return;
 
-  messages.innerHTML += `<div class="user">You: ${input.value}</div>`;
+  messages.innerHTML += `<div>You: ${input.value}</div>`;
 
   let response = "";
 
   if(msg.includes("better person") || msg.includes("mejor persona")){
-    response = "To become a better person in business and life: be honest, keep learning, respect others, and make ethical decisions.";
+    response = "To be a better person in business and life: be honest, keep learning, respect others, and make ethical decisions.";
   } else {
     response = "Try asking: How to be a better person in business? / ¿Cómo ser mejor persona en los negocios?";
   }
 
-  messages.innerHTML += `<div class="bot">Bot: ${response}</div>`;
+  messages.innerHTML += `<div style='color:#ea580c'>Bot: ${response}</div>`;
   input.value = "";
-  messages.scrollTop = messages.scrollHeight;
 }
 </script>
 
