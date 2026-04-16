@@ -1,193 +1,200 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Globalización y Desafíos Globales</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Globalization Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --primary:#0a3d62;
-      --secondary:#3c6382;
-      --accent:#38ada9;
-      --bg:#f4f7fb;
-      --card:#ffffff;
-    }
-
-    *{box-sizing:border-box;scroll-behavior:smooth}
-
     body{
       margin:0;
-      font-family:'Poppins',sans-serif;
-      background:var(--bg);
-      color:#333;
+      font-family:'Inter', sans-serif;
+      background:#0b0f1a;
+      color:#e5e7eb;
     }
 
     header{
-      background:linear-gradient(135deg,var(--primary),var(--secondary));
-      color:white;
-      padding:60px 20px;
       text-align:center;
+      padding:70px 20px;
+      background:radial-gradient(circle at top,#1e3a8a,#020617);
     }
 
     header h1{
-      margin:0;
-      font-size:2.5rem;
-    }
-
-    header p{
-      opacity:0.9;
+      font-size:2.7rem;
+      margin-bottom:10px;
     }
 
     nav{
-      position:sticky;
-      top:0;
-      background:white;
-      padding:10px;
       display:flex;
       justify-content:center;
-      gap:20px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
-      z-index:1000;
+      gap:25px;
+      padding:15px;
+      background:#020617;
+      position:sticky;
+      top:0;
+      border-bottom:1px solid #1f2933;
     }
 
     nav a{
+      color:#cbd5f5;
       text-decoration:none;
-      color:var(--primary);
-      font-weight:600;
-      transition:0.3s;
+      font-weight:500;
     }
 
     nav a:hover{
-      color:var(--accent);
-    }
-
-    .container{
-      max-width:1000px;
-      margin:auto;
-      padding:20px;
+      color:#38bdf8;
     }
 
     section{
-      background:var(--card);
-      margin:30px 0;
-      padding:25px;
-      border-radius:15px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.08);
-      transform:translateY(20px);
-      opacity:0;
-      transition:all 0.6s ease;
-    }
-
-    section.visible{
-      transform:translateY(0);
-      opacity:1;
+      max-width:1000px;
+      margin:auto;
+      padding:50px 20px;
     }
 
     h2{
-      color:var(--primary);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:15px;
+      color:#38bdf8;
+      margin-bottom:20px;
     }
 
     .card{
-      background:#f9fbfd;
-      padding:15px;
-      border-radius:10px;
+      background:#111827;
+      padding:20px;
+      border-radius:14px;
+      margin-bottom:15px;
       transition:0.3s;
     }
 
     .card:hover{
       transform:translateY(-5px);
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      background:#1f2937;
+    }
+
+    .hologram{
+      margin-top:20px;
+      padding:20px;
+      border-radius:15px;
+      background:rgba(56,189,248,0.05);
+      box-shadow:0 0 30px rgba(56,189,248,0.2);
+    }
+
+    button{
+      padding:12px 18px;
+      border:none;
+      border-radius:10px;
+      background:#38bdf8;
+      color:#020617;
+      font-weight:600;
+      cursor:pointer;
+      margin-top:10px;
+    }
+
+    button:hover{
+      background:#0ea5e9;
     }
 
     iframe{
+      width:100%;
+      height:300px;
       border-radius:10px;
+      margin-top:15px;
+    }
+
+    .quiz{
+      margin-top:20px;
+    }
+
+    .quiz button{
+      display:block;
+      width:100%;
       margin-top:10px;
+      background:#1e293b;
+      color:white;
     }
 
     footer{
       text-align:center;
-      padding:20px;
-      background:var(--primary);
-      color:white;
-      margin-top:40px;
+      padding:25px;
+      background:#020617;
+      border-top:1px solid #1f2933;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>🌍 Globalización y Desafíos Globales</h1>
-  <p>Proyecto informativo - Agenda 2030</p>
+  <h1>🌍 Globalization & Global Challenges</h1>
+  <p>A simple interactive project</p>
 </header>
 
 <nav>
-  <a href="#globalizacion">Globalización</a>
-  <a href="#desigualdad">Desigualdad</a>
+  <a href="#globalization">Globalization</a>
+  <a href="#inequality">Inequality</a>
   <a href="#ods">ODS</a>
-  <a href="#noticias">Asuntos Globales</a>
+  <a href="#interactive">Interactive</a>
 </nav>
 
-<div class="container">
-
-<section id="globalizacion">
-  <h2>¿Qué es la Globalización?</h2>
-  <p>La globalización es un proceso de integración mundial que conecta economías, culturas y sociedades mediante el comercio, la tecnología y la comunicación.</p>
-  <div class="grid">
-    <div class="card">🌐 Interconexión global</div>
-    <div class="card">💻 Avance tecnológico</div>
-    <div class="card">📦 Comercio internacional</div>
-  </div>
+<section id="globalization">
+  <h2>What is Globalization?</h2>
+  <div class="card">Globalization connects countries through trade, communication, and technology.</div>
+  <div class="card">It allows cultures and ideas to spread faster than ever.</div>
 </section>
 
-<section id="desigualdad">
-  <h2>Desigualdad en el Mundo</h2>
-  <p>La desigualdad se refiere a las diferencias en ingresos, oportunidades y calidad de vida entre personas y países.</p>
-  <div class="grid">
-    <div class="card">💰 Brecha económica</div>
-    <div class="card">🎓 Acceso a educación</div>
-    <div class="card">🏥 Acceso a salud</div>
-  </div>
+<section id="inequality">
+  <h2>Global Inequality</h2>
+  <div class="card">Not all countries have the same access to resources.</div>
+  <div class="card">Education and healthcare are still unequal in many regions.</div>
 </section>
 
 <section id="ods">
-  <h2>ODS y Agenda 2030</h2>
-  <p>Los ODS son 17 objetivos globales para erradicar la pobreza, proteger el planeta y garantizar bienestar para todos.</p>
-  <div class="grid">
-    <div class="card">🌱 Acción climática</div>
-    <div class="card">📚 Educación de calidad</div>
-    <div class="card">⚖️ Igualdad</div>
+  <h2>ODS - Agenda 2030</h2>
+  <div class="card">The United Nations created 17 goals to improve life globally.</div>
+  <div class="card">These include ending poverty and protecting the planet.</div>
+</section>
+
+<section id="interactive">
+  <h2>Interactive Experience</h2>
+
+  <div class="hologram">
+    <p>Click to hear a short explanation:</p>
+    <button onclick="speakText()">▶ Play</button>
+    <p id="text"></p>
   </div>
-</section>
 
-<section id="noticias">
-  <h2>Asuntos Globales</h2>
-  <p>Explora contenido actual como noticias, videos, libros o podcasts sobre temas globales.</p>
-  <iframe width="100%" height="300" src="https://www.youtube.com/embed/5MgBikgcWnY" allowfullscreen></iframe>
-</section>
+  <iframe src="https://www.youtube.com/embed/5MgBikgcWnY" allowfullscreen></iframe>
 
-</div>
+  <div class="quiz">
+    <h3>Quick Quiz</h3>
+    <p>What is globalization?</p>
+    <button onclick="answer('correct')">Connection between countries</button>
+    <button onclick="answer('wrong')">A type of food</button>
+    <button onclick="answer('wrong')">A sport</button>
+    <p id="result"></p>
+  </div>
+
+</section>
 
 <footer>
-  <p>Proyecto escolar - 2026 | Hecho por estudiante</p>
+  <p>School Project - 2026</p>
 </footer>
 
 <script>
-  const sections = document.querySelectorAll('section');
-  window.addEventListener('scroll', () => {
-    sections.forEach(sec => {
-      const top = sec.getBoundingClientRect().top;
-      if(top < window.innerHeight - 100){
-        sec.classList.add('visible');
-      }
-    });
-  });
+function speakText(){
+  const message = "Globalization connects the world through trade, culture, and technology.";
+  const speech = new SpeechSynthesisUtterance(message);
+  speech.lang = "en-US";
+  window.speechSynthesis.speak(speech);
+  document.getElementById("text").innerText = message;
+}
+
+function answer(type){
+  const result = document.getElementById("result");
+  if(type === 'correct'){
+    result.innerText = "✅ Correct!";
+  } else {
+    result.innerText = "❌ Try again";
+  }
+}
 </script>
 
 </body>
