@@ -1,199 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Globalization Project</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Globalization Project</title>
 
-  <style>
-    body{
-      margin:0;
-      font-family:'Inter', sans-serif;
-      background:#0b0f1a;
-      color:#e5e7eb;
-    }
+<style>
+body{margin:0;font-family:Arial;background:#f4f7fb;color:#222;text-align:center}
+nav{background:#fff;padding:15px;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+nav button{margin:5px;padding:10px;border:none;background:#0ea5e9;color:white;border-radius:8px;cursor:pointer}
+.section{display:none;padding:40px}
+.active{display:block}
+.card{background:white;padding:15px;margin:10px auto;border-radius:10px;max-width:500px;box-shadow:0 4px 10px rgba(0,0,0,0.1);cursor:pointer}
+.news{text-align:left;max-width:700px;margin:auto}
+.news-item{background:white;margin:10px 0;padding:15px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
 
-    header{
-      text-align:center;
-      padding:70px 20px;
-      background:radial-gradient(circle at top,#1e3a8a,#020617);
-    }
-
-    header h1{
-      font-size:2.7rem;
-      margin-bottom:10px;
-    }
-
-    nav{
-      display:flex;
-      justify-content:center;
-      gap:25px;
-      padding:15px;
-      background:#020617;
-      position:sticky;
-      top:0;
-      border-bottom:1px solid #1f2933;
-    }
-
-    nav a{
-      color:#cbd5f5;
-      text-decoration:none;
-      font-weight:500;
-    }
-
-    nav a:hover{
-      color:#38bdf8;
-    }
-
-    section{
-      max-width:1000px;
-      margin:auto;
-      padding:50px 20px;
-    }
-
-    h2{
-      color:#38bdf8;
-      margin-bottom:20px;
-    }
-
-    .card{
-      background:#111827;
-      padding:20px;
-      border-radius:14px;
-      margin-bottom:15px;
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-5px);
-      background:#1f2937;
-    }
-
-    .hologram{
-      margin-top:20px;
-      padding:20px;
-      border-radius:15px;
-      background:rgba(56,189,248,0.05);
-      box-shadow:0 0 30px rgba(56,189,248,0.2);
-    }
-
-    button{
-      padding:12px 18px;
-      border:none;
-      border-radius:10px;
-      background:#38bdf8;
-      color:#020617;
-      font-weight:600;
-      cursor:pointer;
-      margin-top:10px;
-    }
-
-    button:hover{
-      background:#0ea5e9;
-    }
-
-    iframe{
-      width:100%;
-      height:300px;
-      border-radius:10px;
-      margin-top:15px;
-    }
-
-    .quiz{
-      margin-top:20px;
-    }
-
-    .quiz button{
-      display:block;
-      width:100%;
-      margin-top:10px;
-      background:#1e293b;
-      color:white;
-    }
-
-    footer{
-      text-align:center;
-      padding:25px;
-      background:#020617;
-      border-top:1px solid #1f2933;
-    }
-  </style>
+/* CHATBOT */
+.chatbox{max-width:500px;margin:30px auto;background:white;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);padding:15px;text-align:left}
+.chat-messages{height:150px;overflow-y:auto;border-bottom:1px solid #ddd;margin-bottom:10px;padding:5px}
+.chat-input{display:flex;gap:5px}
+.chat-input input{flex:1;padding:8px;border-radius:6px;border:1px solid #ccc}
+.chat-input button{padding:8px 12px;border:none;background:#0ea5e9;color:white;border-radius:6px}
+.bot{color:#0ea5e9;margin:5px 0}
+.user{color:#333;margin:5px 0}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>🌍 Globalization & Global Challenges</h1>
-  <p>A simple interactive project</p>
-</header>
+<h1>🌍 Globalization Project</h1>
 
 <nav>
-  <a href="#globalization">Globalization</a>
-  <a href="#inequality">Inequality</a>
-  <a href="#ods">ODS</a>
-  <a href="#interactive">Interactive</a>
+  <button onclick="showSection('global')">Globalization</button>
+  <button onclick="showSection('inequality')">Inequality</button>
+  <button onclick="showSection('ods')">ODS</button>
+  <button onclick="showSection('news')">News</button>
+  <button onclick="showSection('chat')">ChatBot</button>
 </nav>
 
-<section id="globalization">
-  <h2>What is Globalization?</h2>
-  <div class="card">Globalization connects countries through trade, communication, and technology.</div>
-  <div class="card">It allows cultures and ideas to spread faster than ever.</div>
-</section>
+<!-- GLOBALIZATION -->
+<div id="global" class="section active">
+  <h2 onclick="toggleText('g1')">Globalization</h2>
+  <p id="g1" style="display:none;">It connects countries through trade and technology.</p>
 
-<section id="inequality">
-  <h2>Global Inequality</h2>
-  <div class="card">Not all countries have the same access to resources.</div>
-  <div class="card">Education and healthcare are still unequal in many regions.</div>
-</section>
+  <div class="card" onclick="toggleText('g2')">Technology</div>
+  <p id="g2" style="display:none;">Technology allows faster global communication.</p>
 
-<section id="ods">
-  <h2>ODS - Agenda 2030</h2>
-  <div class="card">The United Nations created 17 goals to improve life globally.</div>
-  <div class="card">These include ending poverty and protecting the planet.</div>
-</section>
+  <div class="card" onclick="toggleText('g3')">Trade</div>
+  <p id="g3" style="display:none;">Countries exchange goods and services.</p>
 
-<section id="interactive">
-  <h2>Interactive Experience</h2>
+  <h3>My Voice</h3>
+  <audio controls>
+    <source src="voz.mp3" type="audio/mpeg">
+  </audio>
+</div>
 
-  <div class="hologram">
-    <p>Click to hear a short explanation:</p>
-    <button onclick="speakText()">▶ Play</button>
-    <p id="text"></p>
+<!-- INEQUALITY -->
+<div id="inequality" class="section">
+  <h2 onclick="toggleText('i1')">Inequality</h2>
+  <p id="i1" style="display:none;">Not everyone has the same opportunities.</p>
+
+  <div class="card" onclick="toggleText('i2')">Income Gap</div>
+  <p id="i2" style="display:none;">Some people earn much more than others.</p>
+
+  <div class="card" onclick="toggleText('i3')">Education</div>
+  <p id="i3" style="display:none;">Not all people have access to education.</p>
+</div>
+
+<!-- ODS -->
+<div id="ods" class="section">
+  <h2 onclick="toggleText('o1')">ODS</h2>
+  <p id="o1" style="display:none;">Global goals to improve life.</p>
+
+  <div class="card" onclick="toggleText('o2')">Climate Action</div>
+  <p id="o2" style="display:none;">Protect the environment.</p>
+
+  <div class="card" onclick="toggleText('o3')">Equality</div>
+  <p id="o3" style="display:none;">Everyone should have equal rights.</p>
+</div>
+
+<!-- NEWS -->
+<div id="news" class="section">
+  <h2>Recent Global News (March–April 2026)</h2>
+  <div class="news">
+    <div class="news-item">🌍 Countries increase cooperation on climate agreements.</div>
+    <div class="news-item">📉 Rising inequality in developing nations discussed globally.</div>
+    <div class="news-item">💻 Growth of AI impacting global jobs and economy.</div>
+    <div class="news-item">🌱 New sustainability projects launched worldwide.</div>
+    <div class="news-item">📦 International trade continues to expand after economic recovery.</div>
   </div>
+</div>
 
-  <iframe src="https://www.youtube.com/embed/5MgBikgcWnY" allowfullscreen></iframe>
+<!-- CHATBOT -->
+<div id="chat" class="section">
+  <h2>Mini ChatBot</h2>
+  <div class="chatbox">
+    <div id="messages" class="chat-messages"></div>
 
-  <div class="quiz">
-    <h3>Quick Quiz</h3>
-    <p>What is globalization?</p>
-    <button onclick="answer('correct')">Connection between countries</button>
-    <button onclick="answer('wrong')">A type of food</button>
-    <button onclick="answer('wrong')">A sport</button>
-    <p id="result"></p>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Ask in English or Spanish...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
   </div>
-
-</section>
-
-<footer>
-  <p>School Project - 2026</p>
-</footer>
+</div>
 
 <script>
-function speakText(){
-  const message = "Globalization connects the world through trade, culture, and technology.";
-  const speech = new SpeechSynthesisUtterance(message);
-  speech.lang = "en-US";
-  window.speechSynthesis.speak(speech);
-  document.getElementById("text").innerText = message;
+function showSection(id){
+  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
 }
 
-function answer(type){
-  const result = document.getElementById("result");
-  if(type === 'correct'){
-    result.innerText = "✅ Correct!";
+function toggleText(id){
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+
+function sendMessage(){
+  const input = document.getElementById('userInput');
+  const msg = input.value.toLowerCase();
+  const messages = document.getElementById('messages');
+
+  if(!msg) return;
+
+  messages.innerHTML += `<div class="user">You: ${input.value}</div>`;
+
+  let response = "";
+
+  if(msg.includes("better person") || msg.includes("mejor persona")){
+    response = "To become a better person in business and life: be honest, keep learning, respect others, and make ethical decisions.";
   } else {
-    result.innerText = "❌ Try again";
+    response = "Try asking: How to be a better person in business? / ¿Cómo ser mejor persona en los negocios?";
   }
+
+  messages.innerHTML += `<div class="bot">Bot: ${response}</div>`;
+  input.value = "";
+  messages.scrollTop = messages.scrollHeight;
 }
 </script>
 
