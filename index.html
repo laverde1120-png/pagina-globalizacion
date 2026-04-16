@@ -6,24 +6,65 @@
 <title>Globalization Project</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#fff7ed;color:#333;text-align:center}
-nav{background:#fb923c;padding:15px}
-nav button{margin:5px;padding:10px;border:none;background:#ea580c;color:white;border-radius:8px;cursor:pointer}
-.section{display:none;padding:40px}
+body{
+  margin:0;
+  font-family:Arial;
+  background:url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff') no-repeat center/cover;
+  color:#333;
+  text-align:center;
+}
+
+.overlay{
+  background:rgba(255,255,255,0.9);
+  min-height:100vh;
+}
+
+nav{
+  background:#fb923c;
+  padding:15px;
+}
+
+nav button{
+  margin:5px;
+  padding:10px;
+  border:none;
+  background:#ea580c;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.section{
+  display:none;
+  padding:40px;
+}
+
 .active{display:block}
-.card{background:white;padding:15px;margin:10px auto;border-radius:10px;max-width:500px;box-shadow:0 4px 10px rgba(0,0,0,0.1);cursor:pointer}
-.news{text-align:left;max-width:700px;margin:auto}
-.news-item{background:white;margin:15px 0;padding:15px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
+
+.card{
+  background:white;
+  padding:15px;
+  margin:10px auto;
+  border-radius:10px;
+  max-width:600px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+  width:100%;
+  border-radius:8px;
+  margin-top:10px;
+}
+
+.news{max-width:700px;margin:auto;text-align:left}
+.news-item{background:white;margin:15px 0;padding:15px;border-radius:10px}
 .news-item img{width:100%;border-radius:8px;margin-top:10px}
-.chatbox{max-width:500px;margin:30px auto;background:white;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);padding:15px;text-align:left}
-.chat-messages{height:150px;overflow-y:auto;border-bottom:1px solid #ddd;margin-bottom:10px;padding:5px}
-.chat-input{display:flex;gap:5px}
-.chat-input input{flex:1;padding:8px;border-radius:6px;border:1px solid #ccc}
-.chat-input button{padding:8px 12px;border:none;background:#ea580c;color:white;border-radius:6px}
+
 </style>
 </head>
 
 <body>
+<div class="overlay">
 
 <h1>🌍 Globalization Project</h1>
 <button onclick="speakIntro()">🔊 Play AI Voice</button>
@@ -37,18 +78,42 @@ nav button{margin:5px;padding:10px;border:none;background:#ea580c;color:white;bo
 </nav>
 
 <div id="global" class="section active">
-  <h2 onclick="toggleText('g1')">Globalization</h2>
-  <p id="g1" style="display:none;">It connects countries through trade and technology.</p>
+  <h2>Globalization</h2>
+  <div class="card">
+    Globalization is the process by which countries become interconnected through trade, communication, and technology. It allows ideas, products, and cultures to spread quickly around the world.
+    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764ce7">
+  </div>
 </div>
 
 <div id="inequality" class="section">
-  <h2 onclick="toggleText('i1')">Inequality</h2>
-  <p id="i1" style="display:none;">Not everyone has the same opportunities.</p>
+  <h2>Inequality</h2>
+  <div class="card">
+    Global inequality refers to the unequal distribution of wealth, opportunities, and access to resources among people and countries. While some nations have advanced technology and strong economies, others still struggle with poverty and limited access to education and healthcare.
+    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c">
+  </div>
 </div>
 
 <div id="ods" class="section">
-  <h2 onclick="toggleText('o1')">ODS</h2>
-  <p id="o1" style="display:none;">Global goals to improve life.</p>
+  <h2>17 Sustainable Development Goals</h2>
+
+  <div class="card">1. No Poverty - End poverty in all its forms everywhere.</div>
+  <div class="card">2. Zero Hunger - End hunger and improve nutrition.</div>
+  <div class="card">3. Good Health - Ensure healthy lives for all.</div>
+  <div class="card">4. Quality Education - Inclusive and equal education.</div>
+  <div class="card">5. Gender Equality - Equal rights for all genders.</div>
+  <div class="card">6. Clean Water - Access to water and sanitation.</div>
+  <div class="card">7. Clean Energy - Affordable renewable energy.</div>
+  <div class="card">8. Economic Growth - Decent work for everyone.</div>
+  <div class="card">9. Industry & Innovation - Build resilient infrastructure.</div>
+  <div class="card">10. Reduced Inequality - Reduce inequality globally.</div>
+  <div class="card">11. Sustainable Cities - Safe and inclusive cities.</div>
+  <div class="card">12. Responsible Consumption - Sustainable production.</div>
+  <div class="card">13. Climate Action - Fight climate change.</div>
+  <div class="card">14. Life Below Water - Protect oceans.</div>
+  <div class="card">15. Life on Land - Protect ecosystems.</div>
+  <div class="card">16. Peace & Justice - Strong institutions.</div>
+  <div class="card">17. Partnerships - Global cooperation.</div>
+
 </div>
 
 <div id="news" class="section">
@@ -57,27 +122,27 @@ nav button{margin:5px;padding:10px;border:none;background:#ea580c;color:white;bo
   <div class="news">
 
     <div class="news-item">
-      🌍 UN Climate Summit pushes stronger global agreements
+      🌍 UN Climate Summit strengthens global agreements
       <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
     </div>
 
     <div class="news-item">
-      📉 World Bank warns about rising inequality in Latin America
+      📉 Rising inequality in Latin America concerns economists
       <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e">
     </div>
 
     <div class="news-item">
-      💻 AI expansion continues impacting global employment
+      💻 AI continues transforming global jobs
       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
     </div>
 
     <div class="news-item">
-      🌱 New renewable energy projects launched in Europe
+      🌱 Renewable energy projects expand worldwide
       <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
     </div>
 
     <div class="news-item">
-      📦 International trade growth continues post-pandemic recovery
+      📦 Global trade increases after recovery
       <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
     </div>
 
@@ -86,13 +151,9 @@ nav button{margin:5px;padding:10px;border:none;background:#ea580c;color:white;bo
 
 <div id="chat" class="section">
   <h2>Mini ChatBot</h2>
-  <div class="chatbox">
-    <div id="messages" class="chat-messages"></div>
-    <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Ask in English or Spanish...">
-      <button onclick="sendMessage()">Send</button>
-    </div>
-  </div>
+  <input type="text" id="userInput" placeholder="Ask in English or Spanish...">
+  <button onclick="sendMessage()">Send</button>
+  <div id="messages"></div>
 </div>
 
 <script>
@@ -101,17 +162,10 @@ function showSection(id){
   document.getElementById(id).classList.add('active');
 }
 
-function toggleText(id){
-  const el = document.getElementById(id);
-  el.style.display = el.style.display === 'none' ? 'block' : 'none';
-}
-
 function speakIntro(){
-  const msg = "Hello! Welcome to my globalization project. Here you will learn about global challenges, inequality, and recent world news.";
+  const msg = "Hello! Welcome to my globalization project. Explore the topics and learn about global challenges and solutions.";
   const speech = new SpeechSynthesisUtterance(msg);
   speech.lang = "en-US";
-  speech.rate = 1;
-  speech.pitch = 1;
   window.speechSynthesis.speak(speech);
 }
 
@@ -127,9 +181,9 @@ function sendMessage(){
   let response = "";
 
   if(msg.includes("better person") || msg.includes("mejor persona")){
-    response = "To be a better person in business and life: be honest, keep learning, respect others, and make ethical decisions.";
+    response = "To be a better person in business and life: be honest, keep learning, respect others, and act ethically.";
   } else {
-    response = "Try asking: How to be a better person in business? / ¿Cómo ser mejor persona en los negocios?";
+    response = "Try asking: How to be a better person in business?";
   }
 
   messages.innerHTML += `<div style='color:#ea580c'>Bot: ${response}</div>`;
@@ -137,5 +191,6 @@ function sendMessage(){
 }
 </script>
 
+</div>
 </body>
 </html>
