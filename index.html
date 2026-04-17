@@ -1,197 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Pulse</title>
+<title>Global Impact Hub 🌍</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#fff7ed;color:#333;text-align:center}
-nav{background:#fb923c;padding:15px}
-nav button{margin:5px;padding:10px;border:none;background:#ea580c;color:white;border-radius:8px}
-
-.section{display:none;padding:30px}
-.active{display:block}
-
-.card{
-background:white;
-margin:15px auto;
-padding:20px;
-border-radius:12px;
-max-width:700px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
 }
 
-.card img{width:100%;border-radius:10px;margin-top:10px}
-
-.chat-icon{
-position:fixed;bottom:20px;right:20px;
-background:#ea580c;color:white;
-padding:15px;border-radius:50%;font-size:25px;cursor:pointer;
+header {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.chatbox{
-display:none;
-position:fixed;bottom:80px;right:20px;
-width:300px;background:white;padding:10px;border-radius:10px;
+nav {
+    background: #222;
+    padding: 10px;
+    text-align: center;
 }
 
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 </style>
 </head>
 
 <body>
 
-<h1>🌍 Global Pulse: The Future of Our World</h1>
-<p>Exploring globalization, inequality and sustainability</p>
-
-<!-- WIDGET -->
-<div class="card">
-<h3>🌎 World Time</h3>
-<p id="time"></p>
-</div>
-
-<!-- VIDEO -->
-<iframe width="90%" height="400"
-src="https://www.youtube.com/embed/21X5lGlDOfg"
-allowfullscreen></iframe>
+<header>
+    <h1>🌍 Global Impact Hub</h1>
+    <p>ODS, Países y Globalización en un solo lugar</p>
+</header>
 
 <nav>
-<button onclick="show('global')">Globalization</button>
-<button onclick="show('ods')">ODS</button>
-<button onclick="show('countries')">Countries</button>
-<button onclick="show('usa')">USA & Moon</button>
-<button onclick="show('media')">Media</button>
+    <a href="#ods">ODS</a>
+    <a href="#paises">Países</a>
+    <a href="#multimedia">Multimedia</a>
 </nav>
 
-<!-- GLOBALIZATION -->
-<div id="global" class="section active">
-<div class="card">
-<h2>🌍 Globalization</h2>
-Globalization is the process that connects countries economically, culturally and technologically. It has allowed international trade to grow and ideas to spread quickly.
+<section id="ods">
+    <h2>📌 Objetivos de Desarrollo Sostenible (ODS)</h2>
 
-<b>Example:</b> A product designed in the USA, manufactured in China and sold in Colombia.
+    <div class="card">
+        <h3>ODS 1: Fin de la pobreza</h3>
+        <p>Busca eliminar la pobreza extrema en todo el mundo, garantizando acceso a recursos básicos como alimentación, vivienda y educación.</p>
+        <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed">
+    </div>
 
-<img src="https://picsum.photos/700/300?1">
-</div>
-</div>
+    <div class="card">
+        <h3>ODS 4: Educación de calidad</h3>
+        <p>Promueve una educación inclusiva y equitativa que permita el desarrollo de habilidades para la vida.</p>
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+    </div>
 
-<!-- ODS -->
-<div id="ods" class="section">
+    <div class="card">
+        <h3>ODS 13: Acción por el clima</h3>
+        <p>Busca combatir el cambio climático mediante acciones sostenibles y conciencia ambiental.</p>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+    </div>
 
-<div class="card">
-<h2>🎯 Sustainable Development Goals</h2>
-The SDGs are 17 global goals created by the United Nations to improve the world.
-</div>
+</section>
 
-<div class="card">
-<b>1. No Poverty:</b> End poverty worldwide. Example: financial aid programs.
-</div>
+<section id="paises">
+    <h2>🌎 Países y Globalización</h2>
 
-<div class="card">
-<b>4. Education:</b> Provide quality education. Example: free schools.
-</div>
+    <div class="card">
+        <h3>Estados Unidos</h3>
+        <p>Potencia global en economía, tecnología y cultura. Lidera en innovación y exploración espacial.</p>
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29">
+    </div>
 
-<div class="card">
-<b>7. Clean Energy:</b> Promote renewable energy like solar panels.
-</div>
+    <div class="card">
+        <h3>Azerbaiyán</h3>
+        <p>País estratégico entre Europa y Asia, clave en energía y comercio internacional.</p>
+        <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5">
+    </div>
 
-<div class="card">
-<b>10. Reduced Inequality:</b> Reduce differences between rich and poor countries.
-</div>
+    <div class="card">
+        <h3>Colombia</h3>
+        <p>Economía emergente con crecimiento en exportaciones como café, flores y aguacate Hass.</p>
+        <img src="https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee">
+    </div>
 
-<div class="card">
-<b>13. Climate Action:</b> Fight climate change with policies.
-</div>
+</section>
 
-<div class="card">
-<b>17. Partnerships:</b> Countries working together globally.
-</div>
+<section id="multimedia">
+    <h2>🎥 Videos y Podcast</h2>
 
-<img src="https://picsum.photos/700/300?2">
+    <div class="card">
+        <h3>🌕 Llegada a la Luna</h3>
+        <iframe src="https://www.youtube.com/embed/wwMDvPCGeE0"></iframe>
+    </div>
 
-</div>
+    <div class="card">
+        <h3>🎧 Podcast sobre Globalización</h3>
+        <iframe src="https://open.spotify.com/embed/episode/7makk4oTQel546B0PZlDM5"></iframe>
+    </div>
 
-<!-- COUNTRIES -->
-<div id="countries" class="section">
+</section>
 
-<div class="card">
-<h2>🌍 Countries Progress</h2>
+<section>
+    <h2>💰 Publicidad</h2>
+    <div class="card">
+        <p>Espacio publicitario</p>
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+    </div>
+</section>
 
-<b>Leaders:</b> Finland, Sweden, Denmark → strong education, equality.
-
-<b>Challenges:</b> Haiti, Afghanistan → poverty and conflict.
-</div>
-
-</div>
-
-<!-- USA -->
-<div id="usa" class="section">
-
-<div class="card">
-<h2>🇺🇸 United States & Moon Mission</h2>
-
-The United States, through NASA, is leading space exploration again.
-
-In recent years, the Artemis program aims to return humans to the Moon and eventually go to Mars.
-
-<b>Importance:</b>
-- Technological advancement  
-- Global leadership  
-- Scientific discovery  
-
-<img src="https://picsum.photos/700/300?3">
-
-</div>
-
-</div>
-
-<!-- MEDIA -->
-<div id="media" class="section">
-
-<div class="card">
-<h2>🎧 Podcast</h2>
-<a href="https://www.youtube.com/results?search_query=globalization+podcast" target="_blank">YouTube</a><br>
-<a href="https://open.spotify.com/search/globalization%20podcast" target="_blank">Spotify</a><br>
-<a href="https://podcasts.apple.com" target="_blank">Apple Podcasts</a>
-</div>
-
-</div>
-
-<!-- CHAT -->
-<div class="chat-icon" onclick="toggleChat()">🤖</div>
-
-<div class="chatbox" id="chatbox">
-<input id="input"><button onclick="send()">Send</button>
-<div id="chat"></div>
-</div>
-
-<script>
-function show(id){
-document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-}
-
-setInterval(()=>{
-document.getElementById("time").innerHTML=new Date().toLocaleString();
-},1000);
-
-function toggleChat(){
-let c=document.getElementById("chatbox");
-c.style.display=c.style.display==='block'?'none':'block';
-}
-
-function send(){
-let i=document.getElementById("input");
-let msg=i.value.toLowerCase();
-let chat=document.getElementById("chat");
-
-if(msg.includes("better")){
-chat.innerHTML+="<p>Be honest, learn and respect others.</p>";
-}else{
-chat.innerHTML+="<p>Ask about business or life.</p>";
-}
-}
-</script>
+<footer>
+    <p>© 2026 Global Impact Hub</p>
+</footer>
 
 </body>
 </html>
