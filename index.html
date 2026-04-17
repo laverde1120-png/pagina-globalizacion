@@ -39,9 +39,14 @@ section {
 .card {
     background: white;
     padding: 15px;
-    margin: 15px 0;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
 img {
@@ -72,32 +77,57 @@ footer {
 </header>
 
 <nav>
-    <a href="#ods">ODS</a>
+    <a href="#ods">ODS destacados</a>
+    <a href="#ods17">ODS completos</a>
     <a href="#paises">Países</a>
     <a href="#multimedia">Multimedia</a>
 </nav>
 
+<!-- ODS DESTACADOS (original) -->
 <section id="ods">
-    <h2>📌 Objetivos de Desarrollo Sostenible (ODS)</h2>
+    <h2>📌 ODS Destacados</h2>
 
     <div class="card">
         <h3>ODS 1: Fin de la pobreza</h3>
-        <p>Busca eliminar la pobreza extrema en todo el mundo, garantizando acceso a recursos básicos como alimentación, vivienda y educación.</p>
-        <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed">
+        <p>Busca eliminar la pobreza extrema en todo el mundo.</p>
     </div>
 
     <div class="card">
         <h3>ODS 4: Educación de calidad</h3>
-        <p>Promueve una educación inclusiva y equitativa que permita el desarrollo de habilidades para la vida.</p>
-        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+        <p>Promueve educación inclusiva y equitativa.</p>
     </div>
 
     <div class="card">
         <h3>ODS 13: Acción por el clima</h3>
-        <p>Busca combatir el cambio climático mediante acciones sostenibles y conciencia ambiental.</p>
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+        <p>Combate el cambio climático.</p>
     </div>
+</section>
 
+<!-- NUEVA SECCIÓN 17 ODS -->
+<section id="ods17">
+    <h2>🌍 Los 17 Objetivos de Desarrollo Sostenible</h2>
+
+    <div class="grid">
+
+        <div class="card"><h3>1. Fin de la pobreza</h3><p>Eliminar la pobreza en todas sus formas.</p></div>
+        <div class="card"><h3>2. Hambre cero</h3><p>Erradicar el hambre y mejorar la nutrición.</p></div>
+        <div class="card"><h3>3. Salud y bienestar</h3><p>Garantizar vida sana para todos.</p></div>
+        <div class="card"><h3>4. Educación de calidad</h3><p>Educación inclusiva y equitativa.</p></div>
+        <div class="card"><h3>5. Igualdad de género</h3><p>Eliminar discriminación de género.</p></div>
+        <div class="card"><h3>6. Agua limpia</h3><p>Acceso universal al agua potable.</p></div>
+        <div class="card"><h3>7. Energía sostenible</h3><p>Energía limpia y accesible.</p></div>
+        <div class="card"><h3>8. Trabajo decente</h3><p>Empleo digno y crecimiento económico.</p></div>
+        <div class="card"><h3>9. Innovación e infraestructura</h3><p>Fomentar desarrollo tecnológico.</p></div>
+        <div class="card"><h3>10. Reducción de desigualdades</h3><p>Menos brechas sociales.</p></div>
+        <div class="card"><h3>11. Ciudades sostenibles</h3><p>Espacios urbanos seguros.</p></div>
+        <div class="card"><h3>12. Consumo responsable</h3><p>Uso eficiente de recursos.</p></div>
+        <div class="card"><h3>13. Acción climática</h3><p>Lucha contra el cambio climático.</p></div>
+        <div class="card"><h3>14. Vida submarina</h3><p>Protección de océanos.</p></div>
+        <div class="card"><h3>15. Vida terrestre</h3><p>Conservar ecosistemas.</p></div>
+        <div class="card"><h3>16. Paz y justicia</h3><p>Sociedades justas.</p></div>
+        <div class="card"><h3>17. Alianzas</h3><p>Cooperación global.</p></div>
+
+    </div>
 </section>
 
 <section id="paises">
@@ -105,44 +135,29 @@ footer {
 
     <div class="card">
         <h3>Estados Unidos</h3>
-        <p>Potencia global en economía, tecnología y cultura. Lidera en innovación y exploración espacial.</p>
-        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29">
+        <p>Potencia global en economía y tecnología.</p>
     </div>
 
     <div class="card">
         <h3>Azerbaiyán</h3>
-        <p>País estratégico entre Europa y Asia, clave en energía y comercio internacional.</p>
-        <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5">
+        <p>Puente entre Europa y Asia.</p>
     </div>
 
     <div class="card">
         <h3>Colombia</h3>
-        <p>Economía emergente con crecimiento en exportaciones como café, flores y aguacate Hass.</p>
-        <img src="https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee">
+        <p>Economía emergente en exportaciones.</p>
     </div>
-
 </section>
 
 <section id="multimedia">
-    <h2>🎥 Videos y Podcast</h2>
+    <h2>🎥 Multimedia</h2>
 
     <div class="card">
-        <h3>🌕 Llegada a la Luna</h3>
         <iframe src="https://www.youtube.com/embed/wwMDvPCGeE0"></iframe>
     </div>
 
     <div class="card">
-        <h3>🎧 Podcast sobre Globalización</h3>
         <iframe src="https://open.spotify.com/embed/episode/7makk4oTQel546B0PZlDM5"></iframe>
-    </div>
-
-</section>
-
-<section>
-    <h2>💰 Publicidad</h2>
-    <div class="card">
-        <p>Espacio publicitario</p>
-        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
     </div>
 </section>
 
