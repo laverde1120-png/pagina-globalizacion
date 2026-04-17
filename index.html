@@ -98,6 +98,7 @@ nav button{
   <button onclick="showSection('global')">Globalization</button>
   <button onclick="showSection('inequality')">Inequality</button>
   <button onclick="showSection('ods')">ODS</button>
+  <button onclick="showSection('countries')">Countries</button>
   <button onclick="showSection('news')">News</button>
 </nav>
 
@@ -139,6 +140,26 @@ nav button{
   <div class="card">15. Life on Land</div>
   <div class="card">16. Peace & Justice</div>
   <div class="card">17. Partnerships</div>
+</div>
+
+<!-- COUNTRIES -->
+<div id="countries" class="section">
+  <h2>Countries and SDG Progress</h2>
+
+  <div class="card">
+    <h3>🌍 Leading Countries</h3>
+    Countries like <b>Finland</b>, <b>Sweden</b>, <b>Denmark</b>, and <b>Germany</b> have achieved high progress in education, sustainability, and equality. These countries invest in strong institutions and social programs.
+  </div>
+
+  <div class="card">
+    <h3>⚠️ Countries with Challenges</h3>
+    Countries such as <b>Haiti</b>, <b>Afghanistan</b>, <b>South Sudan</b>, and <b>Yemen</b> face serious challenges due to poverty, conflict, and lack of resources. This affects their progress in the SDGs.
+  </div>
+
+  <div class="card">
+    <h3>📊 Conclusion</h3>
+    Not all countries progress at the same level. Global cooperation is necessary to help all nations achieve the Sustainable Development Goals.
+  </div>
 </div>
 
 <!-- NEWS -->
@@ -185,7 +206,7 @@ function showSection(id){
 }
 
 function speakIntro(){
-  const msg = "Hello! Welcome to my globalization project.";
+  const msg = "Hello! Welcome to my globalization project. Here you can explore global issues and solutions.";
   const speech = new SpeechSynthesisUtterance(msg);
   speech.lang = "en-US";
   window.speechSynthesis.speak(speech);
@@ -208,7 +229,7 @@ function sendMessage(){
   let response = "";
 
   if(msg.includes("better person") || msg.includes("mejor persona")){
-    response = "Be honest, keep learning, and respect others.";
+    response = "To be a better person in business and life: be honest, keep learning, respect others, and act ethically.";
   } else {
     response = "Try asking about being a better person.";
   }
