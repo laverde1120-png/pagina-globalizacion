@@ -9,14 +9,9 @@
 body{
   margin:0;
   font-family:Arial;
-  background:url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff') no-repeat center/cover;
+  background:#fff7ed;
   color:#333;
   text-align:center;
-}
-
-.overlay{
-  background:rgba(255,255,255,0.9);
-  min-height:100vh;
 }
 
 nav{
@@ -34,11 +29,7 @@ nav button{
   cursor:pointer;
 }
 
-.section{
-  display:none;
-  padding:40px;
-}
-
+.section{display:none;padding:40px}
 .active{display:block}
 
 .card{
@@ -47,24 +38,59 @@ nav button{
   margin:10px auto;
   border-radius:10px;
   max-width:600px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .card img{
   width:100%;
-  border-radius:8px;
-  margin-top:10px;
+  border-radius:10px;
 }
 
 .news{max-width:700px;margin:auto;text-align:left}
 .news-item{background:white;margin:15px 0;padding:15px;border-radius:10px}
-.news-item img{width:100%;border-radius:8px;margin-top:10px}
+.news-item img{width:100%;border-radius:10px;margin-top:10px}
+
+.news a{
+  display:inline-block;
+  margin-top:10px;
+  color:#ea580c;
+  font-weight:bold;
+}
+
+/* CHAT ICON */
+.chat-icon{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#ea580c;
+  color:white;
+  font-size:25px;
+  padding:15px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+/* CHAT BOX */
+.chatbox{
+  display:none;
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  width:300px;
+  background:white;
+  border-radius:10px;
+  padding:10px;
+}
+
+.chat-messages{
+  height:150px;
+  overflow-y:auto;
+  border-bottom:1px solid #ccc;
+}
 
 </style>
 </head>
 
 <body>
-<div class="overlay">
 
 <h1>🌍 Globalization Project</h1>
 <button onclick="speakIntro()">🔊 Play AI Voice</button>
@@ -74,127 +100,83 @@ nav button{
   <button onclick="showSection('inequality')">Inequality</button>
   <button onclick="showSection('ods')">ODS</button>
   <button onclick="showSection('news')">News</button>
-  <button onclick="showSection('chat')">ChatBot</button>
 </nav>
 
+<!-- GLOBALIZATION -->
 <div id="global" class="section active">
   <h2>Globalization</h2>
   <div class="card">
-    Globalization is the process by which countries become interconnected through trade, communication, and technology. It allows ideas, products, and cultures to spread quickly around the world.
-    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764ce7">
+    Globalization connects countries through trade, culture, and technology. It allows faster communication and economic growth worldwide.
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Globalization_illustration.jpg">
   </div>
 </div>
 
+<!-- INEQUALITY -->
 <div id="inequality" class="section">
   <h2>Inequality</h2>
   <div class="card">
-    Global inequality refers to the unequal distribution of wealth, opportunities, and access to resources among people and countries. While some nations have advanced technology and strong economies, others still struggle with poverty and limited access to education and healthcare.
-    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c">
+    Inequality means not everyone has the same opportunities. Some countries and people have more access to resources than others.
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Income_inequality.jpg">
   </div>
 </div>
 
+<!-- ODS -->
 <div id="ods" class="section">
   <h2>17 Sustainable Development Goals</h2>
-
-  <div class="card">1. No Poverty - End poverty in all its forms everywhere.</div>
-  <div class="card">2. Zero Hunger - End hunger and improve nutrition.</div>
-  <div class="card">3. Good Health - Ensure healthy lives for all.</div>
-  <div class="card">4. Quality Education - Inclusive and equal education.</div>
-  <div class="card">5. Gender Equality - Equal rights for all genders.</div>
-  <div class="card">6. Clean Water - Access to water and sanitation.</div>
-  <div class="card">7. Clean Energy - Affordable renewable energy.</div>
-  <div class="card">8. Economic Growth - Decent work for everyone.</div>
-  <div class="card">9. Industry & Innovation - Build resilient infrastructure.</div>
-  <div class="card">10. Reduced Inequality - Reduce inequality globally.</div>
-  <div class="card">11. Sustainable Cities - Safe and inclusive cities.</div>
-  <div class="card">12. Responsible Consumption - Sustainable production.</div>
-  <div class="card">13. Climate Action - Fight climate change.</div>
-  <div class="card">14. Life Below Water - Protect oceans.</div>
-  <div class="card">15. Life on Land - Protect ecosystems.</div>
-  <div class="card">16. Peace & Justice - Strong institutions.</div>
-  <div class="card">17. Partnerships - Global cooperation.</div>
-
+  <div class="card">1. No Poverty</div>
+  <div class="card">2. Zero Hunger</div>
+  <div class="card">3. Good Health</div>
+  <div class="card">4. Quality Education</div>
+  <div class="card">5. Gender Equality</div>
+  <div class="card">6. Clean Water</div>
+  <div class="card">7. Clean Energy</div>
+  <div class="card">8. Economic Growth</div>
+  <div class="card">9. Industry & Innovation</div>
+  <div class="card">10. Reduced Inequality</div>
+  <div class="card">11. Sustainable Cities</div>
+  <div class="card">12. Responsible Consumption</div>
+  <div class="card">13. Climate Action</div>
+  <div class="card">14. Life Below Water</div>
+  <div class="card">15. Life on Land</div>
+  <div class="card">16. Peace & Justice</div>
+  <div class="card">17. Partnerships</div>
 </div>
+
+<!-- NEWS -->
 <div id="news" class="section">
-  <h2>Recent Global News (March–April 2026)</h2>
+  <h2>Recent Global News</h2>
 
   <div class="news">
 
     <div class="news-item">
-      🌍 UN Climate Summit strengthens global agreements
+      🌍 Climate agreements updated worldwide
       <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
-      <br>
-      <a href="https://www.un.org/en/climatechange" target="_blank">Read full article</a>
+      <a href="https://www.un.org/en/climatechange" target="_blank">Know more</a>
     </div>
 
     <div class="news-item">
-      📉 Rising inequality in Latin America concerns economists
+      📉 Inequality increases in developing countries
       <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e">
-      <br>
-      <a href="https://www.worldbank.org/en/topic/poverty" target="_blank">Read full article</a>
+      <a href="https://www.worldbank.org/en/topic/poverty" target="_blank">Know more</a>
     </div>
 
     <div class="news-item">
-      💻 AI continues transforming global jobs
+      💻 AI impacts global jobs
       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-      <br>
-      <a href="https://www.weforum.org/agenda/archive/artificial-intelligence/" target="_blank">Read full article</a>
-    </div>
-
-    <div class="news-item">
-      🌱 Renewable energy projects expand worldwide
-      <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
-      <br>
-      <a href="https://www.iea.org/topics/renewables" target="_blank">Read full article</a>
-    </div>
-
-    <div class="news-item">
-      📦 Global trade increases after recovery
-      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
-      <br>
-      <a href="https://www.wto.org/english/news_e/news_e.htm" target="_blank">Read full article</a>
-    </div>
-
-  </div>
-</div>
-<div 
-  <h2>Recent Global News (March–April 2026)</h2>
-
-  <div class="news">
-
-    <div class="news-item">
-      🌍 UN Climate Summit strengthens global agreements
-      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
-    </div>
-
-    <div class="news-item">
-      📉 Rising inequality in Latin America concerns economists
-      <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e">
-    </div>
-
-    <div class="news-item">
-      💻 AI continues transforming global jobs
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-    </div>
-
-    <div class="news-item">
-      🌱 Renewable energy projects expand worldwide
-      <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
-    </div>
-
-    <div class="news-item">
-      📦 Global trade increases after recovery
-      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+      <a href="https://www.weforum.org/" target="_blank">Know more</a>
     </div>
 
   </div>
 </div>
 
-<div id="chat" class="section">
-  <h2>Mini ChatBot</h2>
-  <input type="text" id="userInput" placeholder="Ask in English or Spanish...">
+<!-- CHAT ICON -->
+<div class="chat-icon" onclick="toggleChat()">🤖</div>
+
+<!-- CHATBOX -->
+<div class="chatbox" id="chatbox">
+  <div id="messages" class="chat-messages"></div>
+  <input type="text" id="userInput" placeholder="Ask...">
   <button onclick="sendMessage()">Send</button>
-  <div id="messages"></div>
 </div>
 
 <script>
@@ -204,10 +186,15 @@ function showSection(id){
 }
 
 function speakIntro(){
-  const msg = "Hello! Welcome to my globalization project. Explore the topics and learn about global challenges and solutions.";
+  const msg = "Hello! Welcome to my globalization project.";
   const speech = new SpeechSynthesisUtterance(msg);
   speech.lang = "en-US";
   window.speechSynthesis.speak(speech);
+}
+
+function toggleChat(){
+  const chat = document.getElementById('chatbox');
+  chat.style.display = chat.style.display === 'block' ? 'none' : 'block';
 }
 
 function sendMessage(){
@@ -217,21 +204,20 @@ function sendMessage(){
 
   if(!msg) return;
 
-  messages.innerHTML += `<div>You: ${input.value}</div>`;
+  messages.innerHTML += "<div>You: " + input.value + "</div>";
 
   let response = "";
 
   if(msg.includes("better person") || msg.includes("mejor persona")){
-    response = "To be a better person in business and life: be honest, keep learning, respect others, and act ethically.";
+    response = "Be honest, keep learning, and respect others.";
   } else {
-    response = "Try asking: How to be a better person in business?";
+    response = "Try asking about being a better person.";
   }
 
-  messages.innerHTML += `<div style='color:#ea580c'>Bot: ${response}</div>`;
+  messages.innerHTML += "<div style='color:#ea580c'>Bot: " + response + "</div>";
   input.value = "";
 }
 </script>
 
-</div>
 </body>
 </html>
