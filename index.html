@@ -10,7 +10,6 @@ body{
   margin:0;
   font-family:Arial;
   background:#fff7ed;
-  color:#333;
   text-align:center;
 }
 
@@ -26,16 +25,15 @@ nav button{
   background:#ea580c;
   color:white;
   border-radius:8px;
-  cursor:pointer;
 }
 
-.section{display:none;padding:40px}
+.section{display:none;padding:30px}
 .active{display:block}
 
 .card{
   background:white;
-  padding:15px;
   margin:10px auto;
+  padding:15px;
   border-radius:10px;
   max-width:600px;
 }
@@ -45,31 +43,19 @@ nav button{
   border-radius:10px;
 }
 
-.news{max-width:700px;margin:auto;text-align:left}
-.news-item{background:white;margin:15px 0;padding:15px;border-radius:10px}
-.news-item img{width:100%;border-radius:10px;margin-top:10px}
-
-.news a{
-  display:inline-block;
-  margin-top:10px;
-  color:#ea580c;
-  font-weight:bold;
-}
-
-/* CHAT ICON */
+/* CHAT */
 .chat-icon{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#ea580c;
   color:white;
-  font-size:25px;
   padding:15px;
   border-radius:50%;
+  font-size:25px;
   cursor:pointer;
 }
 
-/* CHAT BOX */
 .chatbox{
   display:none;
   position:fixed;
@@ -80,12 +66,6 @@ nav button{
   border-radius:10px;
   padding:10px;
 }
-
-.chat-messages{
-  height:150px;
-  overflow-y:auto;
-  border-bottom:1px solid #ccc;
-}
 </style>
 </head>
 
@@ -94,148 +74,129 @@ nav button{
 <h1>🌍 Globalization Project</h1>
 <button onclick="speakIntro()">🔊 Play AI Voice</button>
 
+<!-- VIDEO (tipo largo) -->
+<iframe width="90%" height="400"
+src="https://www.youtube.com/embed/21X5lGlDOfg"
+title="Live Earth Video" frameborder="0" allowfullscreen>
+</iframe>
+
 <nav>
-  <button onclick="showSection('global')">Globalization</button>
-  <button onclick="showSection('inequality')">Inequality</button>
-  <button onclick="showSection('ods')">ODS</button>
-  <button onclick="showSection('countries')">Countries</button>
-  <button onclick="showSection('news')">News</button>
+<button onclick="showSection('global')">Globalization</button>
+<button onclick="showSection('inequality')">Inequality</button>
+<button onclick="showSection('ods')">ODS</button>
+<button onclick="showSection('countries')">Countries</button>
+<button onclick="showSection('news')">News</button>
 </nav>
 
-<!-- GLOBALIZATION -->
+<!-- GLOBAL -->
 <div id="global" class="section active">
-  <h2>Globalization</h2>
-  <div class="card">
-    Globalization connects countries through trade, culture, and technology. It allows faster communication and economic growth worldwide.
-    <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/global-1867347_1280.jpg">
-  </div>
+<h2>Globalization</h2>
+<div class="card">
+Globalization connects countries through trade, communication and culture. It allows ideas and products to move quickly around the world.
+<img src="https://picsum.photos/600/300?1">
+</div>
 </div>
 
 <!-- INEQUALITY -->
 <div id="inequality" class="section">
-  <h2>Inequality</h2>
-  <div class="card">
-    Inequality means not everyone has the same opportunities. Some countries and people have more access to resources than others.
-    <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/poverty-2020636_1280.jpg">
-  </div>
+<h2>Inequality</h2>
+<div class="card">
+Inequality means that people do not have the same opportunities. Some countries have more resources, education and technology than others.
+<img src="https://picsum.photos/600/300?2">
+</div>
 </div>
 
 <!-- ODS -->
 <div id="ods" class="section">
-  <h2>17 Sustainable Development Goals</h2>
-  <div class="card">1. No Poverty</div>
-  <div class="card">2. Zero Hunger</div>
-  <div class="card">3. Good Health</div>
-  <div class="card">4. Quality Education</div>
-  <div class="card">5. Gender Equality</div>
-  <div class="card">6. Clean Water</div>
-  <div class="card">7. Clean Energy</div>
-  <div class="card">8. Economic Growth</div>
-  <div class="card">9. Industry & Innovation</div>
-  <div class="card">10. Reduced Inequality</div>
-  <div class="card">11. Sustainable Cities</div>
-  <div class="card">12. Responsible Consumption</div>
-  <div class="card">13. Climate Action</div>
-  <div class="card">14. Life Below Water</div>
-  <div class="card">15. Life on Land</div>
-  <div class="card">16. Peace & Justice</div>
-  <div class="card">17. Partnerships</div>
+<h2>17 Sustainable Development Goals</h2>
+
+<div class="card">1. No Poverty → End poverty everywhere.</div>
+<div class="card">2. Zero Hunger → Ensure food for all people.</div>
+<div class="card">3. Good Health → Access to healthcare.</div>
+<div class="card">4. Education → Quality education for everyone.</div>
+<div class="card">5. Gender Equality → Equal rights.</div>
+<div class="card">6. Clean Water → Safe water access.</div>
+<div class="card">7. Clean Energy → Renewable energy.</div>
+<div class="card">8. Economic Growth → Jobs and stability.</div>
+<div class="card">9. Innovation → Technology and industry.</div>
+<div class="card">10. Reduced Inequality → Fair opportunities.</div>
+<div class="card">11. Cities → Sustainable cities.</div>
+<div class="card">12. Consumption → Responsible use.</div>
+<div class="card">13. Climate → Fight climate change.</div>
+<div class="card">14. Oceans → Protect marine life.</div>
+<div class="card">15. Land → Protect ecosystems.</div>
+<div class="card">16. Peace → Justice and institutions.</div>
+<div class="card">17. Partnerships → Global cooperation.</div>
+
 </div>
 
 <!-- COUNTRIES -->
 <div id="countries" class="section">
-  <h2>Countries and SDG Progress</h2>
+<h2>Countries and SDG Progress</h2>
 
-  <div class="card">
-    <h3>🌍 Leading Countries</h3>
-    Countries like <b>Finland</b>, <b>Sweden</b>, <b>Denmark</b>, and <b>Germany</b> have achieved high progress in education, sustainability, and equality. These countries invest in strong institutions and social programs.
-  </div>
+<div class="card">
+<b>Leading Countries:</b> Finland, Sweden, Denmark and Germany lead in sustainability and equality.
+</div>
 
-  <div class="card">
-    <h3>⚠️ Countries with Challenges</h3>
-    Countries such as <b>Haiti</b>, <b>Afghanistan</b>, <b>South Sudan</b>, and <b>Yemen</b> face serious challenges due to poverty, conflict, and lack of resources. This affects their progress in the SDGs.
-  </div>
+<div class="card">
+<b>Countries with Challenges:</b> Haiti, Afghanistan, Yemen and South Sudan face poverty and conflict.
+</div>
 
-  <div class="card">
-    <h3>📊 Conclusion</h3>
-    Not all countries progress at the same level. Global cooperation is necessary to help all nations achieve the Sustainable Development Goals.
-  </div>
 </div>
 
 <!-- NEWS -->
 <div id="news" class="section">
-  <h2>Recent Global News</h2>
+<h2>Recent Global News</h2>
 
-  <div class="news">
-
-    <div class="news-item">
-      🌍 Climate agreements updated worldwide
-      <img src="https://cdn.pixabay.com/photo/2016/03/09/09/17/earth-1245950_1280.jpg">
-      <a href="https://www.un.org/en/climatechange" target="_blank">Know more</a>
-    </div>
-
-    <div class="news-item">
-      📉 Inequality increases in developing countries
-      <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/poverty-3082444_1280.jpg">
-      <a href="https://www.worldbank.org/en/topic/poverty" target="_blank">Know more</a>
-    </div>
-
-    <div class="news-item">
-      💻 AI impacts global jobs
-      <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/ai-1959716_1280.jpg">
-      <a href="https://www.weforum.org/" target="_blank">Know more</a>
-    </div>
-
-  </div>
+<div class="card">
+🌍 Climate agreements updated
+<img src="https://picsum.photos/600/300?3">
+<br><a href="https://www.un.org/en/climatechange" target="_blank">Know more</a>
 </div>
 
-<!-- CHAT ICON -->
+<div class="card">
+📉 Inequality rising
+<img src="https://picsum.photos/600/300?4">
+<br><a href="https://www.worldbank.org/en/topic/poverty" target="_blank">Know more</a>
+</div>
+
+</div>
+
+<!-- CHAT -->
 <div class="chat-icon" onclick="toggleChat()">🤖</div>
 
-<!-- CHATBOX -->
 <div class="chatbox" id="chatbox">
-  <div id="messages" class="chat-messages"></div>
-  <input type="text" id="userInput" placeholder="Ask...">
-  <button onclick="sendMessage()">Send</button>
+<input type="text" id="userInput">
+<button onclick="sendMessage()">Send</button>
+<div id="messages"></div>
 </div>
 
 <script>
 function showSection(id){
-  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
 }
 
 function speakIntro(){
-  const msg = "Hello! Welcome to my globalization project. Here you can explore global issues and solutions.";
-  const speech = new SpeechSynthesisUtterance(msg);
-  speech.lang = "en-US";
-  window.speechSynthesis.speak(speech);
+let msg=new SpeechSynthesisUtterance("Welcome to my globalization project");
+speechSynthesis.speak(msg);
 }
 
 function toggleChat(){
-  const chat = document.getElementById('chatbox');
-  chat.style.display = chat.style.display === 'block' ? 'none' : 'block';
+let c=document.getElementById('chatbox');
+c.style.display=c.style.display==='block'?'none':'block';
 }
 
 function sendMessage(){
-  const input = document.getElementById('userInput');
-  const msg = input.value.toLowerCase();
-  const messages = document.getElementById('messages');
+let input=document.getElementById('userInput');
+let msg=input.value.toLowerCase();
+let m=document.getElementById('messages');
 
-  if(!msg) return;
-
-  messages.innerHTML += "<div>You: " + input.value + "</div>";
-
-  let response = "";
-
-  if(msg.includes("better person") || msg.includes("mejor persona")){
-    response = "To be a better person in business and life: be honest, keep learning, respect others, and act ethically.";
-  } else {
-    response = "Try asking about being a better person.";
-  }
-
-  messages.innerHTML += "<div style='color:#ea580c'>Bot: " + response + "</div>";
-  input.value = "";
+if(msg.includes("better")||msg.includes("mejor")){
+m.innerHTML+="<p>Be honest, learn, and respect others.</p>";
+}else{
+m.innerHTML+="<p>Ask about being a better person.</p>";
+}
 }
 </script>
 
