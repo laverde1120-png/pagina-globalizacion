@@ -3,123 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Impact Hub | Pro</title>
+<title>Global Impact Hub | Professional</title>
 
 <style>
+:root{
+    --primary:#0a2540;
+    --accent:#2563eb;
+}
+
 body{
     margin:0;
-    font-family:Arial;
+    font-family: 'Segoe UI', sans-serif;
     background:#f5f7fa;
 }
 
+/* HEADER */
 header{
     background:linear-gradient(120deg,#0a2540,#2563eb);
     color:white;
+    padding:40px;
     text-align:center;
-    padding:30px;
 }
 
+/* NAV */
 nav{
     background:#111;
-    padding:10px;
     text-align:center;
+    padding:12px;
 }
-
 nav a{
     color:white;
     margin:0 15px;
     text-decoration:none;
+    font-weight:600;
 }
 
+/* SECTIONS */
 section{
-    padding:30px;
+    padding:40px 20px;
     max-width:1200px;
     margin:auto;
 }
 
+/* GRID */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
+/* CARDS */
 .card{
     background:white;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    border-radius:16px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+    overflow:hidden;
+    transition:all 0.3s ease;
+}
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+button{
+    background:var(--accent);
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.hidden{
+    display:none;
+}
+
+/* SDG COLORS */
+.sdg1{background:#e5243b;}
+.sdg2{background:#dda63a;}
+.sdg3{background:#4c9f38;}
+.sdg4{background:#c5192d;}
+.sdg5{background:#ff3a21;}
+.sdg6{background:#26bde2;}
+.sdg7{background:#fcc30b;}
+.sdg8{background:#a21942;}
+.sdg9{background:#fd6925;}
+.sdg10{background:#dd1367;}
+.sdg11{background:#fd9d24;}
+.sdg12{background:#bf8b2e;}
+.sdg13{background:#3f7e44;}
+.sdg14{background:#0a97d9;}
+.sdg15{background:#56c02b;}
+.sdg16{background:#00689d;}
+.sdg17{background:#19486a;}
+
+.sdg-card h3{
+    color:white;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
     text-align:center;
     padding:20px;
-    transition:0.3s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
+iframe{
+    width:100%;
+    height:350px;
+    border-radius:12px;
 }
-
-.icon{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-/* CHATBOT */
-.chatbox{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    width:260px;
-    background:white;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-.chat-header{
-    background:#2563eb;
-    color:white;
-    padding:10px;
-    border-radius:10px 10px 0 0;
-}
-
-.chat-body{
-    padding:10px;
-    height:120px;
-    overflow-y:auto;
-    font-size:14px;
-}
-
-.chat-input{
-    display:flex;
-}
-
-.chat-input input{
-    flex:1;
-    border:none;
-    padding:8px;
-}
-
-.chat-input button{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:8px;
-}
-
 </style>
 
 <script>
-function sendMessage(){
-    let input=document.getElementById("userInput").value.toLowerCase();
-    let chat=document.getElementById("chatBody");
-
-    let response="I don't understand.";
-
-    if(input.includes("negotiator")){
-        response="A good negotiator listens actively, communicates clearly, understands both sides, and finds solutions where everyone benefits.";
-    }
-
-    chat.innerHTML += "<p><b>You:</b> "+input+"</p>";
-    chat.innerHTML += "<p><b>Bot:</b> "+response+"</p>";
-
-    document.getElementById("userInput").value="";
+function toggleInfo(id){
+    document.getElementById(id).classList.toggle("hidden");
 }
 </script>
 
@@ -128,57 +136,95 @@ function sendMessage(){
 <body>
 
 <header>
-<h1>🌍 Global Impact Hub</h1>
-<p>Professional Version with AI Chat</p>
+    <h1>🌍 Global Impact Hub</h1>
+    <p>Understanding Globalization, Inequality & Sustainable Development</p>
 </header>
 
 <nav>
-<a href="#sdg">SDGs</a>
-<a href="#globalization">Globalization</a>
+    <a href="#globalization">Globalization</a>
+    <a href="#issues">Global Issues</a>
+    <a href="#inequality">Inequality</a>
+    <a href="#sdg">SDGs</a>
+    <a href="#media">Media</a>
 </nav>
 
+<!-- GLOBALIZATION -->
 <section id="globalization">
 <h2>🌐 Globalization</h2>
 <div class="card">
-<p>Globalization connects countries through trade, culture, and technology.</p>
+<div class="card-content">
+<p>Globalization is the process that connects countries through trade, technology, and culture. It creates an interconnected world where goods, ideas, and people move across borders.</p>
+<p><strong>Example:</strong> A phone designed in the USA, assembled in China, and used in Colombia.</p>
+</div>
 </div>
 </section>
 
+<!-- GLOBAL ISSUES -->
+<section id="issues">
+<h2>🌍 Global Issues</h2>
+<div class="grid">
+<div class="card"><div class="card-content"><h3>Climate Change</h3><p>A global environmental crisis affecting all countries.</p></div></div>
+<div class="card"><div class="card-content"><h3>Conflicts</h3><p>Wars impact economies and societies worldwide.</p></div></div>
+<div class="card"><div class="card-content"><h3>Economic Instability</h3><p>Inflation and crises affect millions.</p></div></div>
+</div>
+</section>
+
+<!-- INEQUALITY -->
+<section id="inequality">
+<h2>⚖️ Inequality</h2>
+<div class="card">
+<div class="card-content">
+<p>Inequality means that resources and opportunities are not equally distributed. Some people have access to education, healthcare, and wealth, while others do not.</p>
+</div>
+</div>
+</section>
+
+<!-- SDGs -->
 <section id="sdg">
-<h2>🌍 SDGs (UN Style Icons)</h2>
+<h2>🌍 The 17 Sustainable Development Goals</h2>
 
 <div class="grid">
 
-<div class="card"><div class="icon">🌍</div><h3>No Poverty</h3></div>
-<div class="card"><div class="icon">🍽️</div><h3>Zero Hunger</h3></div>
-<div class="card"><div class="icon">❤️</div><h3>Health</h3></div>
-<div class="card"><div class="icon">📚</div><h3>Education</h3></div>
-<div class="card"><div class="icon">⚖️</div><h3>Inequality</h3></div>
-<div class="card"><div class="icon">💧</div><h3>Water</h3></div>
-<div class="card"><div class="icon">⚡</div><h3>Energy</h3></div>
-<div class="card"><div class="icon">💼</div><h3>Work</h3></div>
-<div class="card"><div class="icon">🏗️</div><h3>Innovation</h3></div>
-<div class="card"><div class="icon">🏙️</div><h3>Cities</h3></div>
-<div class="card"><div class="icon">♻️</div><h3>Consumption</h3></div>
-<div class="card"><div class="icon">🌡️</div><h3>Climate</h3></div>
-<div class="card"><div class="icon">🌊</div><h3>Oceans</h3></div>
-<div class="card"><div class="icon">🌳</div><h3>Land</h3></div>
-<div class="card"><div class="icon">🕊️</div><h3>Peace</h3></div>
-<div class="card"><div class="icon">🤝</div><h3>Partnerships</h3></div>
+<!-- Example SDG -->
+<div class="card sdg-card sdg1">
+<div class="card-content">
+<h3>1. No Poverty</h3>
+<button onclick="toggleInfo('s1')">More</button>
+<p id="s1" class="hidden">End poverty in all its forms.</p>
+</div>
+</div>
+
+<div class="card sdg-card sdg2"><div class="card-content"><h3>2. Zero Hunger</h3></div></div>
+<div class="card sdg-card sdg3"><div class="card-content"><h3>3. Good Health</h3></div></div>
+<div class="card sdg-card sdg4"><div class="card-content"><h3>4. Education</h3></div></div>
+<div class="card sdg-card sdg5"><div class="card-content"><h3>5. Gender Equality</h3></div></div>
+<div class="card sdg-card sdg6"><div class="card-content"><h3>6. Clean Water</h3></div></div>
+<div class="card sdg-card sdg7"><div class="card-content"><h3>7. Clean Energy</h3></div></div>
+<div class="card sdg-card sdg8"><div class="card-content"><h3>8. Decent Work</h3></div></div>
+<div class="card sdg-card sdg9"><div class="card-content"><h3>9. Innovation</h3></div></div>
+<div class="card sdg-card sdg10"><div class="card-content"><h3>10. Reduced Inequality</h3></div></div>
+<div class="card sdg-card sdg11"><div class="card-content"><h3>11. Sustainable Cities</h3></div></div>
+<div class="card sdg-card sdg12"><div class="card-content"><h3>12. Responsible Consumption</h3></div></div>
+<div class="card sdg-card sdg13"><div class="card-content"><h3>13. Climate Action</h3></div></div>
+<div class="card sdg-card sdg14"><div class="card-content"><h3>14. Life Below Water</h3></div></div>
+<div class="card sdg-card sdg15"><div class="card-content"><h3>15. Life on Land</h3></div></div>
+<div class="card sdg-card sdg16"><div class="card-content"><h3>16. Peace & Justice</h3></div></div>
+<div class="card sdg-card sdg17"><div class="card-content"><h3>17. Partnerships</h3></div></div>
 
 </div>
 </section>
 
-<!-- CHATBOT -->
-<div class="chatbox">
-<div class="chat-header">Ask me 🤖</div>
-<div class="chat-body" id="chatBody"></div>
+<!-- MEDIA -->
+<section id="media">
+<h2>🎥 Video</h2>
+<div class="card">
+<iframe src="https://www.youtube.com/embed/Hn9F0Yd8ZyA" allowfullscreen></iframe>
+</div>
+</section>
 
-<div class="chat-input">
-<input type="text" id="userInput" placeholder="Ask something...">
-<button onclick="sendMessage()">Send</button>
-</div>
-</div>
+<footer>
+<p>© 2026 Global Impact Hub | Professional Version</p>
+</footer>
 
 </body>
 </html>
