@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #f4f4f4;
+    background: #eef2f3;
 }
 
 header {
     background: linear-gradient(90deg, #1e3c72, #2a5298);
     color: white;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -39,19 +39,46 @@ section {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    gap: 20px;
 }
 
 .card {
     background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card img {
     width: 100%;
-    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+button {
+    background: #2a5298;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e3c72;
+}
+
+.hidden {
+    display: none;
 }
 
 iframe {
@@ -67,76 +94,192 @@ footer {
     padding: 15px;
 }
 </style>
+
+<script>
+function toggleInfo(id) {
+    let element = document.getElementById(id);
+    element.classList.toggle("hidden");
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
     <h1>🌍 Global Impact Hub</h1>
-    <p>ODS, Países y Globalización en un solo lugar</p>
+    <p>Sustainable Development Goals & Globalization</p>
 </header>
 
 <nav>
-    <a href="#ods">ODS destacados</a>
-    <a href="#ods17">ODS completos</a>
-    <a href="#paises">Países</a>
+    <a href="#ods17">SDGs</a>
     <a href="#multimedia">Multimedia</a>
 </nav>
 
-<!-- ODS DESTACADOS -->
-<section id="ods">
-    <h2>📌 ODS Destacados</h2>
-
-    <div class="grid">
-        <div class="card">
-            <h3>ODS 1: Fin de la pobreza</h3>
-            <p>Eliminar la pobreza extrema.</p>
-            <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed">
-        </div>
-
-        <div class="card">
-            <h3>ODS 4: Educación de calidad</h3>
-            <p>Educación inclusiva para todos.</p>
-            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
-        </div>
-
-        <div class="card">
-            <h3>ODS 13: Acción por el clima</h3>
-            <p>Combatir el cambio climático.</p>
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
-        </div>
-    </div>
-</section>
-
-<!-- 17 ODS -->
 <section id="ods17">
-    <h2>🌍 Los 17 ODS</h2>
+    <h2>🌍 The 17 Sustainable Development Goals</h2>
 
     <div class="grid">
-        <div class="card"><h3>1. Fin de la pobreza</h3><img src="https://source.unsplash.com/300x200/?poverty"></div>
-        <div class="card"><h3>2. Hambre cero</h3><img src="https://source.unsplash.com/300x200/?food"></div>
-        <div class="card"><h3>3. Salud</h3><img src="https://source.unsplash.com/300x200/?health"></div>
-        <div class="card"><h3>4. Educación</h3><img src="https://source.unsplash.com/300x200/?education"></div>
-        <div class="card"><h3>5. Igualdad de género</h3><img src="https://source.unsplash.com/300x200/?women"></div>
-        <div class="card"><h3>6. Agua limpia</h3><img src="https://source.unsplash.com/300x200/?water"></div>
-        <div class="card"><h3>7. Energía</h3><img src="https://source.unsplash.com/300x200/?energy"></div>
-        <div class="card"><h3>8. Trabajo</h3><img src="https://source.unsplash.com/300x200/?work"></div>
-        <div class="card"><h3>9. Innovación</h3><img src="https://source.unsplash.com/300x200/?technology"></div>
-        <div class="card"><h3>10. Desigualdad</h3><img src="https://source.unsplash.com/300x200/?inequality"></div>
-        <div class="card"><h3>11. Ciudades</h3><img src="https://source.unsplash.com/300x200/?city"></div>
-        <div class="card"><h3>12. Consumo</h3><img src="https://source.unsplash.com/300x200/?recycle"></div>
-        <div class="card"><h3>13. Clima</h3><img src="https://source.unsplash.com/300x200/?climate"></div>
-        <div class="card"><h3>14. Océanos</h3><img src="https://source.unsplash.com/300x200/?ocean"></div>
-        <div class="card"><h3>15. Ecosistemas</h3><img src="https://source.unsplash.com/300x200/?forest"></div>
-        <div class="card"><h3>16. Paz</h3><img src="https://source.unsplash.com/300x200/?peace"></div>
-        <div class="card"><h3>17. Alianzas</h3><img src="https://source.unsplash.com/300x200/?global"></div>
+
+        <!-- Repeat structure -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
+            <div class="card-content">
+                <h3>1. No Poverty</h3>
+                <button onclick="toggleInfo('info1')">More</button>
+                <p id="info1" class="hidden">End poverty in all its forms everywhere.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1467453678174-768ec283a940">
+            <div class="card-content">
+                <h3>2. Zero Hunger</h3>
+                <button onclick="toggleInfo('info2')">More</button>
+                <p id="info2" class="hidden">End hunger and improve food security.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+            <div class="card-content">
+                <h3>3. Good Health</h3>
+                <button onclick="toggleInfo('info3')">More</button>
+                <p id="info3" class="hidden">Ensure healthy lives and well-being.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+            <div class="card-content">
+                <h3>4. Quality Education</h3>
+                <button onclick="toggleInfo('info4')">More</button>
+                <p id="info4" class="hidden">Ensure inclusive education.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
+            <div class="card-content">
+                <h3>5. Gender Equality</h3>
+                <button onclick="toggleInfo('info5')">More</button>
+                <p id="info5" class="hidden">Achieve gender equality.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+            <div class="card-content">
+                <h3>6. Clean Water</h3>
+                <button onclick="toggleInfo('info6')">More</button>
+                <p id="info6" class="hidden">Access to safe water.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+            <div class="card-content">
+                <h3>7. Clean Energy</h3>
+                <button onclick="toggleInfo('info7')">More</button>
+                <p id="info7" class="hidden">Affordable sustainable energy.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+            <div class="card-content">
+                <h3>8. Decent Work</h3>
+                <button onclick="toggleInfo('info8')">More</button>
+                <p id="info8" class="hidden">Economic growth and jobs.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+            <div class="card-content">
+                <h3>9. Innovation</h3>
+                <button onclick="toggleInfo('info9')">More</button>
+                <p id="info9" class="hidden">Build resilient infrastructure.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c">
+            <div class="card-content">
+                <h3>10. Reduced Inequality</h3>
+                <button onclick="toggleInfo('info10')">More</button>
+                <p id="info10" class="hidden">Reduce inequality.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b">
+            <div class="card-content">
+                <h3>11. Sustainable Cities</h3>
+                <button onclick="toggleInfo('info11')">More</button>
+                <p id="info11" class="hidden">Make cities inclusive.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <div class="card-content">
+                <h3>12. Responsible Consumption</h3>
+                <button onclick="toggleInfo('info12')">More</button>
+                <p id="info12" class="hidden">Sustainable production.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <div class="card-content">
+                <h3>13. Climate Action</h3>
+                <button onclick="toggleInfo('info13')">More</button>
+                <p id="info13" class="hidden">Combat climate change.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <div class="card-content">
+                <h3>14. Life Below Water</h3>
+                <button onclick="toggleInfo('info14')">More</button>
+                <p id="info14" class="hidden">Protect oceans.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <div class="card-content">
+                <h3>15. Life on Land</h3>
+                <button onclick="toggleInfo('info15')">More</button>
+                <p id="info15" class="hidden">Protect ecosystems.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac">
+            <div class="card-content">
+                <h3>16. Peace & Justice</h3>
+                <button onclick="toggleInfo('info16')">More</button>
+                <p id="info16" class="hidden">Strong institutions.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+            <div class="card-content">
+                <h3>17. Partnerships</h3>
+                <button onclick="toggleInfo('info17')">More</button>
+                <p id="info17" class="hidden">Global cooperation.</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<!-- MULTIMEDIA -->
 <section id="multimedia">
     <h2>🎥 Multimedia</h2>
-
     <div class="card">
         <iframe src="https://www.youtube.com/embed/Hn9F0Yd8ZyA" allowfullscreen></iframe>
     </div>
