@@ -1,165 +1,158 @@
 <!DOCTYPE html>
-<h1>🌍 Global Pulse: The Future of Our World</h1>
-<p>Exploring globalization, inequality, and sustainable solutions</p>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Globalization Project</title>
+<title>Global Pulse</title>
 
 <style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#fff7ed;
-  text-align:center;
-}
-
-nav{
-  background:#fb923c;
-  padding:15px;
-}
-
-nav button{
-  margin:5px;
-  padding:10px;
-  border:none;
-  background:#ea580c;
-  color:white;
-  border-radius:8px;
-}
+body{margin:0;font-family:Arial;background:#fff7ed;color:#333;text-align:center}
+nav{background:#fb923c;padding:15px}
+nav button{margin:5px;padding:10px;border:none;background:#ea580c;color:white;border-radius:8px}
 
 .section{display:none;padding:30px}
 .active{display:block}
 
 .card{
-  background:white;
-  margin:10px auto;
-  padding:15px;
-  border-radius:10px;
-  max-width:600px;
+background:white;
+margin:15px auto;
+padding:20px;
+border-radius:12px;
+max-width:700px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.card img{
-  width:100%;
-  border-radius:10px;
-}
+.card img{width:100%;border-radius:10px;margin-top:10px}
 
-/* CHAT */
 .chat-icon{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#ea580c;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  font-size:25px;
-  cursor:pointer;
+position:fixed;bottom:20px;right:20px;
+background:#ea580c;color:white;
+padding:15px;border-radius:50%;font-size:25px;cursor:pointer;
 }
 
 .chatbox{
-  display:none;
-  position:fixed;
-  bottom:80px;
-  right:20px;
-  width:300px;
-  background:white;
-  border-radius:10px;
-  padding:10px;
+display:none;
+position:fixed;bottom:80px;right:20px;
+width:300px;background:white;padding:10px;border-radius:10px;
 }
+
 </style>
 </head>
 
 <body>
 
-<h1>🌍 Globalization Project</h1>
-<button onclick="speakIntro()">🔊 Play AI Voice</button>
+<h1>🌍 Global Pulse: The Future of Our World</h1>
+<p>Exploring globalization, inequality and sustainability</p>
 
-<!-- VIDEO (tipo largo) -->
+<!-- WIDGET -->
+<div class="card">
+<h3>🌎 World Time</h3>
+<p id="time"></p>
+</div>
+
+<!-- VIDEO -->
 <iframe width="90%" height="400"
 src="https://www.youtube.com/embed/21X5lGlDOfg"
-title="Live Earth Video" frameborder="0" allowfullscreen>
-</iframe>
+allowfullscreen></iframe>
 
 <nav>
-<button onclick="showSection('global')">Globalization</button>
-<button onclick="showSection('inequality')">Inequality</button>
-<button onclick="showSection('ods')">ODS</button>
-<button onclick="showSection('countries')">Countries</button>
-<button onclick="showSection('news')">News</button>
+<button onclick="show('global')">Globalization</button>
+<button onclick="show('ods')">ODS</button>
+<button onclick="show('countries')">Countries</button>
+<button onclick="show('usa')">USA & Moon</button>
+<button onclick="show('media')">Media</button>
 </nav>
 
-<!-- GLOBAL -->
+<!-- GLOBALIZATION -->
 <div id="global" class="section active">
-<h2>Globalization</h2>
 <div class="card">
-Globalization connects countries through trade, communication and culture. It allows ideas and products to move quickly around the world.
-<img src="https://picsum.photos/600/300?1">
-</div>
-</div>
+<h2>🌍 Globalization</h2>
+Globalization is the process that connects countries economically, culturally and technologically. It has allowed international trade to grow and ideas to spread quickly.
 
-<!-- INEQUALITY -->
-<div id="inequality" class="section">
-<h2>Inequality</h2>
-<div class="card">
-Inequality means that people do not have the same opportunities. Some countries have more resources, education and technology than others.
-<img src="https://picsum.photos/600/300?2">
+<b>Example:</b> A product designed in the USA, manufactured in China and sold in Colombia.
+
+<img src="https://picsum.photos/700/300?1">
 </div>
 </div>
 
 <!-- ODS -->
 <div id="ods" class="section">
-<h2>17 Sustainable Development Goals</h2>
 
-<div class="card">1. No Poverty → End poverty everywhere.</div>
-<div class="card">2. Zero Hunger → Ensure food for all people.</div>
-<div class="card">3. Good Health → Access to healthcare.</div>
-<div class="card">4. Education → Quality education for everyone.</div>
-<div class="card">5. Gender Equality → Equal rights.</div>
-<div class="card">6. Clean Water → Safe water access.</div>
-<div class="card">7. Clean Energy → Renewable energy.</div>
-<div class="card">8. Economic Growth → Jobs and stability.</div>
-<div class="card">9. Innovation → Technology and industry.</div>
-<div class="card">10. Reduced Inequality → Fair opportunities.</div>
-<div class="card">11. Cities → Sustainable cities.</div>
-<div class="card">12. Consumption → Responsible use.</div>
-<div class="card">13. Climate → Fight climate change.</div>
-<div class="card">14. Oceans → Protect marine life.</div>
-<div class="card">15. Land → Protect ecosystems.</div>
-<div class="card">16. Peace → Justice and institutions.</div>
-<div class="card">17. Partnerships → Global cooperation.</div>
+<div class="card">
+<h2>🎯 Sustainable Development Goals</h2>
+The SDGs are 17 global goals created by the United Nations to improve the world.
+</div>
+
+<div class="card">
+<b>1. No Poverty:</b> End poverty worldwide. Example: financial aid programs.
+</div>
+
+<div class="card">
+<b>4. Education:</b> Provide quality education. Example: free schools.
+</div>
+
+<div class="card">
+<b>7. Clean Energy:</b> Promote renewable energy like solar panels.
+</div>
+
+<div class="card">
+<b>10. Reduced Inequality:</b> Reduce differences between rich and poor countries.
+</div>
+
+<div class="card">
+<b>13. Climate Action:</b> Fight climate change with policies.
+</div>
+
+<div class="card">
+<b>17. Partnerships:</b> Countries working together globally.
+</div>
+
+<img src="https://picsum.photos/700/300?2">
 
 </div>
 
 <!-- COUNTRIES -->
 <div id="countries" class="section">
-<h2>Countries and SDG Progress</h2>
 
 <div class="card">
-<b>Leading Countries:</b> Finland, Sweden, Denmark and Germany lead in sustainability and equality.
+<h2>🌍 Countries Progress</h2>
+
+<b>Leaders:</b> Finland, Sweden, Denmark → strong education, equality.
+
+<b>Challenges:</b> Haiti, Afghanistan → poverty and conflict.
 </div>
+
+</div>
+
+<!-- USA -->
+<div id="usa" class="section">
 
 <div class="card">
-<b>Countries with Challenges:</b> Haiti, Afghanistan, Yemen and South Sudan face poverty and conflict.
-</div>
+<h2>🇺🇸 United States & Moon Mission</h2>
+
+The United States, through NASA, is leading space exploration again.
+
+In recent years, the Artemis program aims to return humans to the Moon and eventually go to Mars.
+
+<b>Importance:</b>
+- Technological advancement  
+- Global leadership  
+- Scientific discovery  
+
+<img src="https://picsum.photos/700/300?3">
 
 </div>
 
-<!-- NEWS -->
-<div id="news" class="section">
-<h2>Recent Global News</h2>
+</div>
+
+<!-- MEDIA -->
+<div id="media" class="section">
 
 <div class="card">
-🌍 Climate agreements updated
-<img src="https://picsum.photos/600/300?3">
-<br><a href="https://www.un.org/en/climatechange" target="_blank">Know more</a>
-</div>
-
-<div class="card">
-📉 Inequality rising
-<img src="https://picsum.photos/600/300?4">
-<br><a href="https://www.worldbank.org/en/topic/poverty" target="_blank">Know more</a>
+<h2>🎧 Podcast</h2>
+<a href="https://www.youtube.com/results?search_query=globalization+podcast" target="_blank">YouTube</a><br>
+<a href="https://open.spotify.com/search/globalization%20podcast" target="_blank">Spotify</a><br>
+<a href="https://podcasts.apple.com" target="_blank">Apple Podcasts</a>
 </div>
 
 </div>
@@ -168,51 +161,37 @@ Inequality means that people do not have the same opportunities. Some countries 
 <div class="chat-icon" onclick="toggleChat()">🤖</div>
 
 <div class="chatbox" id="chatbox">
-<input type="text" id="userInput">
-<button onclick="sendMessage()">Send</button>
-<div id="messages"></div>
+<input id="input"><button onclick="send()">Send</button>
+<div id="chat"></div>
 </div>
 
 <script>
-function showSection(id){
+function show(id){
 document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
 
-function speakIntro(){
-let msg=new SpeechSynthesisUtterance("Welcome to my globalization project");
-speechSynthesis.speak(msg);
-}
+setInterval(()=>{
+document.getElementById("time").innerHTML=new Date().toLocaleString();
+},1000);
 
 function toggleChat(){
-let c=document.getElementById('chatbox');
+let c=document.getElementById("chatbox");
 c.style.display=c.style.display==='block'?'none':'block';
 }
 
-function sendMessage(){
-let input=document.getElementById('userInput');
-let msg=input.value.toLowerCase();
-let m=document.getElementById('messages');
+function send(){
+let i=document.getElementById("input");
+let msg=i.value.toLowerCase();
+let chat=document.getElementById("chat");
 
-if(msg.includes("better")||msg.includes("mejor")){
-m.innerHTML+="<p>Be honest, learn, and respect others.</p>";
+if(msg.includes("better")){
+chat.innerHTML+="<p>Be honest, learn and respect others.</p>";
 }else{
-m.innerHTML+="<p>Ask about being a better person.</p>";
+chat.innerHTML+="<p>Ask about business or life.</p>";
 }
 }
 </script>
 
 </body>
-  <div class="card">
-  <h2>🎧 Podcast: Globalization</h2>
-  <p>
-    This podcast explains how globalization started, how economies connect, and why inequality exists today.
-  </p>
-
-  <a href="https://econofact.org/podcast/a-brief-history-of-globalization" target="_blank">▶ Listen (Official)</a><br><br>
-
-  <a href="https://open.spotify.com" target="_blank">🎧 Spotify</a><br>
-  <a href="https://podcasts.apple.com" target="_blank">🍎 Apple Podcasts</a><br>
-  <a href="https://www.youtube.com" target="_blank">📺 YouTube</a>
-</div>
 </html>
