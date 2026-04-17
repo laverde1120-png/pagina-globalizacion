@@ -3,102 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Impact Hub 🌍</title>
+<title>Global Impact Hub | Professional</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #eef2f3;
+:root{
+    --primary:#0a2540;
+    --accent:#2563eb;
 }
 
-header {
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
-    color: white;
-    padding: 25px;
-    text-align: center;
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#f5f7fa;
 }
 
-nav {
-    background: #222;
-    padding: 10px;
-    text-align: center;
+/* HEADER */
+header{
+    background:linear-gradient(120deg,#0a2540,#2563eb);
+    color:white;
+    padding:40px;
+    text-align:center;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+/* NAV */
+nav{
+    background:#111;
+    text-align:center;
+    padding:12px;
+}
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:600;
 }
 
-section {
-    padding: 25px;
+/* SECTIONS */
+section{
+    padding:40px 20px;
+    max-width:1200px;
+    margin:auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+/* CARDS */
+.card{
+    background:white;
+    border-radius:16px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+    overflow:hidden;
+    transition:all 0.3s ease;
+}
+.card:hover{
+    transform:translateY(-8px);
 }
 
-.card:hover {
-    transform: scale(1.05);
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
 }
 
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+.card-content{
+    padding:15px;
 }
 
-.card-content {
-    padding: 15px;
+button{
+    background:var(--accent);
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
 }
 
-button {
-    background: #2a5298;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
+.hidden{
+    display:none;
 }
 
-button:hover {
-    background: #1e3c72;
+/* SDG COLORS */
+.sdg1{background:#e5243b;}
+.sdg2{background:#dda63a;}
+.sdg3{background:#4c9f38;}
+.sdg4{background:#c5192d;}
+.sdg5{background:#ff3a21;}
+.sdg6{background:#26bde2;}
+.sdg7{background:#fcc30b;}
+.sdg8{background:#a21942;}
+.sdg9{background:#fd6925;}
+.sdg10{background:#dd1367;}
+.sdg11{background:#fd9d24;}
+.sdg12{background:#bf8b2e;}
+.sdg13{background:#3f7e44;}
+.sdg14{background:#0a97d9;}
+.sdg15{background:#56c02b;}
+.sdg16{background:#00689d;}
+.sdg17{background:#19486a;}
+
+.sdg-card h3{
+    color:white;
 }
 
-.hidden {
-    display: none;
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 
-iframe {
-    width: 100%;
-    height: 300px;
-    border-radius: 10px;
-}
-
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
+iframe{
+    width:100%;
+    height:350px;
+    border-radius:12px;
 }
 </style>
 
 <script>
-function toggleInfo(id) {
-    let element = document.getElementById(id);
-    element.classList.toggle("hidden");
+function toggleInfo(id){
+    document.getElementById(id).classList.toggle("hidden");
 }
 </script>
 
@@ -108,7 +137,7 @@ function toggleInfo(id) {
 
 <header>
     <h1>🌍 Global Impact Hub</h1>
-    <p>Globalization, Inequality & Sustainable Development Goals</p>
+    <p>Understanding Globalization, Inequality & Sustainable Development</p>
 </header>
 
 <nav>
@@ -116,104 +145,85 @@ function toggleInfo(id) {
     <a href="#issues">Global Issues</a>
     <a href="#inequality">Inequality</a>
     <a href="#sdg">SDGs</a>
-    <a href="#multimedia">Multimedia</a>
+    <a href="#media">Media</a>
 </nav>
 
 <!-- GLOBALIZATION -->
 <section id="globalization">
-    <h2>🌐 What is Globalization?</h2>
-    <div class="card">
-        <div class="card-content">
-            <p>Globalization is the process that connects countries through trade, technology, communication, and culture.</p>
-            <p>It allows goods, ideas, and people to move across the world, creating an interconnected global system.</p>
-            <p><strong>Example:</strong> A phone designed in the USA, produced in Asia, and used in Colombia.</p>
-        </div>
-    </div>
+<h2>🌐 Globalization</h2>
+<div class="card">
+<div class="card-content">
+<p>Globalization is the process that connects countries through trade, technology, and culture. It creates an interconnected world where goods, ideas, and people move across borders.</p>
+<p><strong>Example:</strong> A phone designed in the USA, assembled in China, and used in Colombia.</p>
+</div>
+</div>
 </section>
 
 <!-- GLOBAL ISSUES -->
 <section id="issues">
-    <h2>🌍 Global Issues</h2>
-    <div class="grid">
-
-        <div class="card">
-            <div class="card-content">
-                <h3>Climate Change</h3>
-                <p>Global warming affects ecosystems, weather, and human life.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <h3>Wars & Conflicts</h3>
-                <p>Conflicts create instability and humanitarian crises.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <h3>Economic Crisis</h3>
-                <p>Inflation and unemployment affect millions worldwide.</p>
-            </div>
-        </div>
-
-    </div>
+<h2>🌍 Global Issues</h2>
+<div class="grid">
+<div class="card"><div class="card-content"><h3>Climate Change</h3><p>A global environmental crisis affecting all countries.</p></div></div>
+<div class="card"><div class="card-content"><h3>Conflicts</h3><p>Wars impact economies and societies worldwide.</p></div></div>
+<div class="card"><div class="card-content"><h3>Economic Instability</h3><p>Inflation and crises affect millions.</p></div></div>
+</div>
 </section>
 
 <!-- INEQUALITY -->
 <section id="inequality">
-    <h2>⚖️ Inequality</h2>
-    <div class="card">
-        <div class="card-content">
-            <p>Inequality refers to the unequal distribution of wealth, opportunities, and resources.</p>
-            <p>While some people have access to education and healthcare, others struggle to meet basic needs.</p>
-            <p>This creates social and economic gaps between countries and populations.</p>
-        </div>
-    </div>
+<h2>⚖️ Inequality</h2>
+<div class="card">
+<div class="card-content">
+<p>Inequality means that resources and opportunities are not equally distributed. Some people have access to education, healthcare, and wealth, while others do not.</p>
+</div>
+</div>
 </section>
 
 <!-- SDGs -->
 <section id="sdg">
-    <h2>🌍 The 17 Sustainable Development Goals</h2>
+<h2>🌍 The 17 Sustainable Development Goals</h2>
 
-    <div class="grid">
+<div class="grid">
 
-        <!-- Repeat SDGs -->
-        <script>
-        const sdgs = [
-        "No Poverty","Zero Hunger","Good Health","Quality Education","Gender Equality",
-        "Clean Water","Clean Energy","Decent Work","Innovation",
-        "Reduced Inequality","Sustainable Cities","Responsible Consumption",
-        "Climate Action","Life Below Water","Life on Land","Peace & Justice","Partnerships"
-        ];
+<!-- Example SDG -->
+<div class="card sdg-card sdg1">
+<div class="card-content">
+<h3>1. No Poverty</h3>
+<button onclick="toggleInfo('s1')">More</button>
+<p id="s1" class="hidden">End poverty in all its forms.</p>
+</div>
+</div>
 
-        for(let i=0;i<sdgs.length;i++){
-            document.write(`
-            <div class="card">
-                <img src="https://picsum.photos/300/200?random=${i}">
-                <div class="card-content">
-                    <h3>${i+1}. ${sdgs[i]}</h3>
-                    <button onclick="toggleInfo('sdg${i}')">More</button>
-                    <p id="sdg${i}" class="hidden">This goal focuses on improving global conditions.</p>
-                </div>
-            </div>
-            `);
-        }
-        </script>
+<div class="card sdg-card sdg2"><div class="card-content"><h3>2. Zero Hunger</h3></div></div>
+<div class="card sdg-card sdg3"><div class="card-content"><h3>3. Good Health</h3></div></div>
+<div class="card sdg-card sdg4"><div class="card-content"><h3>4. Education</h3></div></div>
+<div class="card sdg-card sdg5"><div class="card-content"><h3>5. Gender Equality</h3></div></div>
+<div class="card sdg-card sdg6"><div class="card-content"><h3>6. Clean Water</h3></div></div>
+<div class="card sdg-card sdg7"><div class="card-content"><h3>7. Clean Energy</h3></div></div>
+<div class="card sdg-card sdg8"><div class="card-content"><h3>8. Decent Work</h3></div></div>
+<div class="card sdg-card sdg9"><div class="card-content"><h3>9. Innovation</h3></div></div>
+<div class="card sdg-card sdg10"><div class="card-content"><h3>10. Reduced Inequality</h3></div></div>
+<div class="card sdg-card sdg11"><div class="card-content"><h3>11. Sustainable Cities</h3></div></div>
+<div class="card sdg-card sdg12"><div class="card-content"><h3>12. Responsible Consumption</h3></div></div>
+<div class="card sdg-card sdg13"><div class="card-content"><h3>13. Climate Action</h3></div></div>
+<div class="card sdg-card sdg14"><div class="card-content"><h3>14. Life Below Water</h3></div></div>
+<div class="card sdg-card sdg15"><div class="card-content"><h3>15. Life on Land</h3></div></div>
+<div class="card sdg-card sdg16"><div class="card-content"><h3>16. Peace & Justice</h3></div></div>
+<div class="card sdg-card sdg17"><div class="card-content"><h3>17. Partnerships</h3></div></div>
 
-    </div>
+</div>
 </section>
 
-<!-- MULTIMEDIA -->
-<section id="multimedia">
-    <h2>🎥 Multimedia</h2>
-    <div class="card">
-        <iframe src="https://www.youtube.com/embed/Hn9F0Yd8ZyA" allowfullscreen></iframe>
-    </div>
+<!-- MEDIA -->
+<section id="media">
+<h2>🎥 Video</h2>
+<div class="card">
+<iframe src="https://www.youtube.com/embed/Hn9F0Yd8ZyA" allowfullscreen></iframe>
+</div>
 </section>
 
 <footer>
-    <p>© 2026 Global Impact Hub</p>
+<p>© 2026 Global Impact Hub | Professional Version</p>
 </footer>
 
 </body>
